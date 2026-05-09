@@ -165,12 +165,17 @@
     .modal-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;cursor:pointer;line-height:1}
 
     /* ── RESPONSIVE ── */
+    .nav-links{display:flex;gap:24px;padding:10px 0;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+    .nav-links a{color:#aaa;text-decoration:none}
+    .nav-links a:hover{color:#fff}
+    .nav-dropdown{position:relative}
+    .nav-dropdown .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#222;border:1px solid #333;border-radius:6px;min-width:340px;padding:8px 0;z-index:200}
+    .nav-dropdown:hover .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;color:#ccc;text-decoration:none;padding:9px 18px;font-size:12px;letter-spacing:.5px;text-transform:none;transition:.15s}
+    .dropdown-menu a:hover{color:#fff;background:#333}
     @media(max-width:600px){
       .toc ol{columns:1}
-      header nav{display:none}
-      .footer-cta{flex-wrap:wrap}
-      .stat-row{grid-template-columns:1fr 1fr}
-      .comparison-table{font-size:13px}
+      .nav-links{display:none}
     }
   </style>
 </head>
@@ -198,9 +203,29 @@
       <button class="btn-sub" onclick="document.getElementById('subscribe-modal').classList.add('open')">Subscribe</button>
     </div>
   </div>
-  <nav aria-label="Main navigation">
+  <nav class="nav-links" aria-label="Main navigation">
     <a href="/">Home</a>
-    <a href="/posts">Posts</a>
+    <div class="nav-dropdown">
+      <a href="/posts">Posts</a>
+      <div class="dropdown-menu">
+        <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Is a Canadian Education Worth It?</a>
+        <a href="#">The Reality of Finding Your First Job</a>
+        <a href="#">The "Survival" vs. "Field" Job Gap</a>
+        <a href="#">State of the 2026 Job Market</a>
+        <a href="#">Canadian Workplace Culture</a>
+        <a href="#">Earning Potential: Expectation vs. Reality</a>
+        <a href="#">The True Cost of Living</a>
+        <a href="#">Surviving the Chilly Winters</a>
+        <a href="#">The Rent Crisis: What $2,500 Gets You</a>
+        <a href="#">Getting Around: Transportation</a>
+        <a href="#">Food: The Taste of Home vs. Grocery Bills</a>
+        <a href="#">The Hidden Mental Toll of Immigration</a>
+        <a href="#">Navigating New 2026 Permit Rules</a>
+        <a href="#">The Long PR Journey</a>
+        <a href="#">An Honest Talk About Racism</a>
+        <a href="#">Decision-Making Questionnaire</a>
+      </div>
+    </div>
     <a href="/about">About</a>
   </nav>
 </header>
