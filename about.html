@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>About | Unfiltered Canada</title>
+  <meta name="description" content="About Anuj Vaghela — the immigrant behind Unfiltered Canada. 8.5 years in Canada, no fluff, just honest perspectives on immigration, work, and life.">
+  <meta name="author" content="Anuj Vaghela">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.unfilteredcanada.com/about">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About | Unfiltered Canada">
+  <meta property="og:description" content="The immigrant behind Unfiltered Canada — 8.5 years in Canada, no fluff, just honest perspectives.">
+  <meta property="og:url" content="https://www.unfilteredcanada.com/about">
+  <meta property="og:site_name" content="Unfiltered Canada">
+  <meta property="og:image" content="https://www.unfilteredcanada.com/Unfiltered_Canada_Logo.png">
+  <meta property="og:locale" content="en_CA">
+
+  <link rel="icon" type="image/png" href="/Unfiltered_Canada_Logo.png">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Georgia,serif;background:#fff;color:#1a1a1a}
+
+    /* ── Header / Nav ── */
+    header{background:#111;color:#fff;padding:0 32px;position:sticky;top:0;z-index:100}
+    .nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0 12px;border-bottom:1px solid #333}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-title{font-size:20px;font-weight:700;color:#fff}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn-sub{background:#fff;color:#111;border:none;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;transition:background .3s,color .3s,box-shadow .3s}
+    @keyframes purplePulse {
+      0%   { background:#fff; color:#111; box-shadow: 0 0 0 0 rgba(149,76,233,0.7); }
+      15%  { background:#7c3aed; color:#fff; box-shadow: 0 0 0 8px rgba(149,76,233,0.4); }
+      35%  { background:#a855f7; color:#fff; box-shadow: 0 0 0 14px rgba(149,76,233,0.15); }
+      55%  { background:#7c3aed; color:#fff; box-shadow: 0 0 0 8px rgba(149,76,233,0.25); }
+      75%  { background:#9333ea; color:#fff; box-shadow: 0 0 0 4px rgba(149,76,233,0.1); }
+      100% { background:#fff; color:#111; box-shadow: 0 0 0 0 rgba(149,76,233,0); }
+    }
+    .btn-sub.pulse-once {
+      animation: purplePulse 1.8s ease-out forwards;
+    }
+    .nav-links{display:flex;gap:24px;padding:10px 0;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+    .nav-links a{color:#aaa;text-decoration:none}
+    .nav-links a:hover,.nav-links a.active{color:#fff}
+    .nav-dropdown{position:relative}
+    .nav-dropdown .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#222;border:1px solid #333;border-radius:6px;min-width:340px;padding:8px 0;z-index:200}
+    .nav-dropdown:hover .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;color:#ccc;text-decoration:none;padding:9px 18px;font-size:12px;letter-spacing:.5px;text-transform:none;transition:.15s}
+    .dropdown-menu a:hover{color:#fff;background:#333}
+
+    /* ── Hero ── */
+    .hero{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:56px 32px;text-align:center}
+    .hero-tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#ddd;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:16px;font-family:Arial,sans-serif}
+    .hero h1{font-size:clamp(22px,3.2vw,36px);line-height:1.28;max-width:620px;margin:0 auto 18px;font-weight:700;color:#fff}
+    .hero-sub{font-family:Arial,sans-serif;font-size:15px;color:#9db;max-width:500px;margin:0 auto;line-height:1.6}
+
+    /* ── Page layout ── */
+    .page{max-width:740px;margin:0 auto;padding:52px 20px 64px}
+
+    /* ── About bio card ── */
+    .bio-card{display:flex;gap:28px;align-items:flex-start;background:#f7f7f5;border:1px solid #e8e8e8;border-radius:10px;padding:28px;margin-bottom:40px}
+    .bio-avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#1a1a2e,#0f3460);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
+    .bio-text h2{font-size:22px;font-weight:700;margin-bottom:6px}
+    .bio-text .bio-role{font-family:Arial,sans-serif;font-size:13px;color:#888;letter-spacing:.8px;text-transform:uppercase;margin-bottom:12px}
+    .bio-text p{font-size:16px;line-height:1.75;color:#444}
+
+    /* ── Section headings ── */
+    h2.sh{font-size:24px;font-weight:700;margin:44px 0 14px;color:#111;border-bottom:2px solid #111;padding-bottom:8px}
+
+    /* ── Body copy ── */
+    .page p{font-size:17px;line-height:1.82;color:#1a1a1a;margin-bottom:20px}
+    .intro-pull{font-size:18px;line-height:1.75;color:#444;margin-bottom:28px;font-style:italic;border-left:3px solid #111;padding-left:18px}
+    .callout{background:#fffbf0;border:1px solid #f0d080;border-left:4px solid #e6a817;border-right:1px solid #f0d080;border-top:1px solid #f0d080;border-bottom:1px solid #f0d080;border-radius:0 6px 6px 0;padding:18px 22px;margin:28px 0;font-size:16px;line-height:1.72;color:#444}
+
+    /* ── Stat pills ── */
+    .stats{display:flex;gap:16px;flex-wrap:wrap;margin:28px 0}
+    .stat{background:#111;color:#fff;padding:14px 20px;border-radius:8px;text-align:center;min-width:140px;flex:1}
+    .stat-num{font-size:26px;font-weight:700;display:block}
+    .stat-label{font-family:Arial,sans-serif;font-size:12px;color:#aaa;letter-spacing:.6px;text-transform:uppercase;margin-top:4px;display:block}
+
+    /* ── Contact / Form ── */
+    .contact-section{margin-top:48px}
+    .contact-section h2.sh{margin-top:0}
+    .form-wrap{margin-top:20px;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8}
+    .form-wrap iframe{display:block;width:100%}
+
+    /* ── Footer CTA ── */
+    .footer-cta{background:#111;color:#fff;padding:26px 32px;display:flex;align-items:center;gap:18px;margin-top:64px}
+    .footer-cta p{font-family:Arial,sans-serif;font-size:14px;color:#bbb;flex:1}
+    .footer-cta p strong{color:#fff}
+    .btn-upd{background:#555;color:#fff;border:none;padding:9px 20px;font-size:12px;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:4px;flex-shrink:0;font-family:Arial,sans-serif}
+
+    /* ── Subscribe modal ── */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+    .modal-overlay.open{display:flex}
+    .modal-box{background:#fff;border-radius:12px;padding:2rem;max-width:480px;width:90%;position:relative}
+    .modal-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;cursor:pointer;line-height:1}
+
+    @media(max-width:600px){
+      .nav-links{display:none}
+      .bio-card{flex-direction:column;align-items:center;text-align:center}
+      .stats{justify-content:center}
+      .footer-cta{flex-wrap:wrap}
+    }
+  </style>
+</head>
+
+<!-- Subscribe Modal -->
+<div class="modal-overlay" id="subscribe-modal"
+     onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal-box">
+    <button class="modal-close"
+            onclick="document.getElementById('subscribe-modal').classList.remove('open')">
+      &times;
+    </button>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="feedf2fc-403b-4ac8-ae26-e39d079c1168"></script>
+  </div>
+</div>
+
+<body>
+
+<header>
+  <div class="nav-top">
+    <div class="brand">
+      <img src="Unfiltered_Canada_Logo.png" style="width:38px;height:38px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada Logo">
+      <span class="brand-title">Unfiltered Canada</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-sub" onclick="document.getElementById('subscribe-modal').classList.add('open')">
+        Subscribe
+      </button>
+    </div>
+  </div>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <div class="nav-dropdown">
+      <a href="#">Posts</a>
+      <div class="dropdown-menu">
+        <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Is a Canadian Education Worth It?</a>
+        <a href="#">The Reality of Finding Your First Job</a>
+        <a href="#">The "Survival" vs. "Field" Job Gap</a>
+        <a href="#">State of the 2026 Job Market</a>
+        <a href="#">Canadian Workplace Culture</a>
+        <a href="#">Earning Potential: Expectation vs. Reality</a>
+        <a href="#">The True Cost of Living</a>
+        <a href="#">Surviving the Chilly Winters</a>
+        <a href="#">The Rent Crisis: What $2,500 Gets You</a>
+        <a href="#">Getting Around: Transportation</a>
+        <a href="#">Food: The Taste of Home vs. Grocery Bills</a>
+        <a href="#">The Hidden Mental Toll of Immigration</a>
+        <a href="#">Navigating New 2026 Permit Rules</a>
+        <a href="#">The Long PR Journey</a>
+        <a href="#">An Honest Talk About Racism</a>
+        <a href="#">Decision-Making Questionnaire</a>
+      </div>
+    </div>
+    <a href="/about" class="active">About</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-tag">About This Site</div>
+    <h1>The Person Behind Unfiltered Canada</h1>
+    <p class="hero-sub">No PR firm. No sponsorships. Just an immigrant who decided to write the guide he wish he'd had.</p>
+  </div>
+
+  <div class="page">
+
+    <!-- Bio card -->
+    <div class="bio-card">
+      <img src="my_photo.jpeg" alt="Anuj Vaghela" style="width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+      <div class="bio-text">
+        <h2>Anuj Vaghela</h2>
+        <div class="bio-role">Immigrant · Writer · Ontario-based</div>
+        <p>Moved from India to Ontario in 2017 on a student visa. Navigated college, survival jobs, field work, PR, and everything in between. Still here — and still figuring it out.</p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">8.5</span>
+        <span class="stat-label">Years in Canada</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">16</span>
+        <span class="stat-label">Topics covered</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Unfiltered opinion</span>
+      </div>
+    </div>
+
+    <!-- Why this site -->
+    <h2 class="sh">Why I started this</h2>
+    <p class="intro-pull">Every immigration blog I found was either a consultant's sales pitch, a Reddit thread full of outdated advice, or a government PDF designed to confuse you.</p>
+    <p>So I started writing. Not to be an authority — but to share the kind of perspective you'd get from a friend who's already been through it. The friend who tells you to bring more warm clothes, warns you about the survival job trap, and is honest about the moments that made them question everything.</p>
+    <p>Unfiltered Canada is that friend.</p>
+
+    <div class="callout">💡 Everything on this site is my personal experience and opinion. It is not immigration, legal, or financial advice. Always verify details with official sources before making decisions.</div>
+
+    <!-- What you'll find -->
+    <h2 class="sh">What you'll find here</h2>
+    <p>Deep dives into the 16 factors that actually determine whether Canada is worth it for you — education ROI, job market realities, cost of living, the PR grind, and the things people don't talk about publicly, like racism and mental health.</p>
+    <p>I write one post at a time, as thoroughly as I can, prioritising the topics my readers ask about most.</p>
+
+    <!-- Contact form -->
+    <div class="contact-section">
+      <h2 class="sh">Send me your questions or concerns</h2>
+      <p>Have a topic you'd like me to cover? A question about your specific situation? Or just want to share your story? Fill out the form below — I read every submission.</p>
+      <div class="form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeM1FrXzRb1deuo3pgbkof9asi9QHxiJaJPMgxiX8M-aSsjOg/viewform?embedded=true"
+          height="689"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
+    </div>
+
+  </div><!-- /.page -->
+
+</main>
+
+<!-- Footer CTA 
+<div class="footer-cta">
+  <img src="Unfiltered_Canada_Logo.png" style="width:44px;height:44px;object-fit:contain;border-radius:4px;flex-shrink:0;" alt="Unfiltered Canada">
+  <p><strong>Get new posts in your inbox.</strong><br>No spam. No consultants. Just honest takes on Canadian immigration.</p>
+  <button class="btn-upd" onclick="document.getElementById('subscribe-modal').classList.add('open')">Subscribe</button>
+</div>
+-->
+
+<script>
+  (function () {
+    var count = 0;
+    var atBottom = false;
+    var btn = document.querySelector('.nav-top .btn-sub');
+
+    window.addEventListener('scroll', function () {
+      if (count >= 3) return;
+      var scrolled = window.scrollY + window.innerHeight;
+      var total = document.documentElement.scrollHeight;
+      var nearBottom = scrolled >= total - 120;
+
+      if (nearBottom && !atBottom) {
+        atBottom = true;
+        count++;
+        btn.classList.remove('pulse-once');
+        void btn.offsetWidth; // force reflow so animation restarts
+        btn.classList.add('pulse-once');
+        btn.addEventListener('animationend', function () {
+          btn.classList.remove('pulse-once');
+        }, { once: true });
+      } else if (!nearBottom) {
+        atBottom = false; // reset so next scroll-to-bottom counts
+      }
+    });
+  })();
+</script>
+</body>
+</html>
