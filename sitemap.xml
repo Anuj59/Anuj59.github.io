@@ -9,6 +9,22 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- About page -->
+  <url>
+    <loc>https://www.unfilteredcanada.com/about.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog post: Is a Canadian Education Worth It for Immigrants? -->
+  <url>
+    <loc>https://www.unfilteredcanada.com/Is_a_Canadian_Education_Worth_It_for_Immigrants.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Add new blog post pages below as you publish them -->
   <!-- Example:
   <url>
