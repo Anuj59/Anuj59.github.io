@@ -26,7 +26,7 @@
   <!-- ═══════════════════════════════════════════════
        OPEN GRAPH (Social sharing previews)
   ════════════════════════════════════════════════ -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Is Immigrating to Canada Still Worth It in 2026? My Honest 8-Year Review">
   <meta property="og:description" content="After 8.5 years living in Canada as an immigrant from India, here's my brutally honest review across 16 real-world categories — jobs, salary, cost of living, PR, and more.">
   <meta property="og:url" content="https://www.unfilteredcanada.com/">
@@ -39,6 +39,14 @@
   <meta property="article:tag" content="Canada Immigration">
   <meta property="article:tag" content="India to Canada">
   <meta property="article:tag" content="Canadian Life">
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER / X CARD
+  ════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is Immigrating to Canada Still Worth It in 2026? My Honest 8-Year Review">
+  <meta name="twitter:description" content="After 8.5 years in Canada as an immigrant from India — an honest review across 16 real-world categories. No fluff.">
+  <meta name="twitter:image" content="https://www.unfilteredcanada.com/Unfiltered_Canada_Logo.png">
 
   <!-- ═══════════════════════════════════════════════
        STRUCTURED DATA — Article Schema
@@ -78,6 +86,23 @@
       "@type": "Thing",
       "name": "Immigration to Canada"
     }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════
+       STRUCTURED DATA — Person Schema (E-E-A-T)
+       Tells Google who the author is and establishes
+       authority via lived experience signals.
+  ════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anuj Vaghela",
+    "url": "https://www.unfilteredcanada.com/about",
+    "description": "Immigrant from India, living in Ontario, Canada since 2017. Writer and creator of Unfiltered Canada.",
+    "knowsAbout": ["Canadian Immigration", "Life in Canada", "India to Canada Immigration", "Canadian Education", "Permanent Residency Canada"],
+    "sameAs": []
   }
   </script>
 
@@ -208,6 +233,8 @@
   </style>
 </head>
 
+<body>
+
 <div class="modal-overlay" id="subscribe-modal"
      onclick="if(event.target===this) this.classList.remove('open')">
   <div class="modal-box">
@@ -218,8 +245,6 @@
     <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="feedf2fc-403b-4ac8-ae26-e39d079c1168"></script>
   </div>
 </div>
-
-<body>
 
 <header>
   <div class="nav-top">
