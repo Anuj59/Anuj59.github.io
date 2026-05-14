@@ -162,7 +162,9 @@
     .toc li a:hover{color:#0070f3;border-bottom-color:#0070f3}
 
     /* ── SECTION HEADINGS ── */
-    h2.sh{font-size:26px;font-weight:700;margin:44px 0 16px;color:#111;scroll-margin-top:80px}
+    /* FIX: increased scroll-margin-top to account for full sticky header height on desktop
+       (nav-top ~65px + nav-links ~37px = ~102px total, using 120px for safe clearance) */
+    h2.sh{font-size:26px;font-weight:700;margin:44px 0 16px;color:#111;scroll-margin-top:120px}
 
     /* ── BODY TEXT ── */
     article ul, article ol{padding-left:22px;margin-bottom:24px}
@@ -231,6 +233,8 @@
   .nav-links.open .dropdown-menu a{padding:9px 0;font-size:13px;border-bottom:1px solid #1a1a1a}
   .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
   .hamburger span{width:22px;height:2px;background:#fff;display:block;border-radius:2px}
+  /* Mobile: header only shows nav-top (nav-links hidden), so less offset needed */
+  h2.sh{scroll-margin-top:75px}
 }
 @media(min-width:601px){.hamburger{display:none}}
   </style>
