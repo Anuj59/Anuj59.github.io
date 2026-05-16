@@ -243,6 +243,62 @@
       cursor: pointer;
       line-height: 1;
     }
+
+    /* ── Latest Posts Section ── */
+.latest-posts {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 48px 20px 60px;
+  border-top: 1px solid #e8e8e8;
+}
+.latest-posts-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #888;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+.post-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity .15s;
+}
+.post-card:hover { opacity: .75; }
+.post-card-badge {
+  flex-shrink: 0;
+  background: #1a1a2e;
+  color: #9db;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+.post-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.post-card-body p {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+@media(max-width:600px){
+  .post-card { flex-direction: column; gap: 10px; }
+}
   </style>
 </head>
 
@@ -371,21 +427,18 @@
   </div>
 
 </main>
-<!--
-<section class="comments" aria-label="Comments">
-  <h3>Leave a comment</h3>
-  <p class="c-prompt">Which of the 16 factors worries you the most? I read every comment and use your questions to plan future posts.</p>
-  -->
-  <!-- Utterances Comments System
-  <script src="https://utteranc.es/client.js"
-          repo="Anuj59/Anuj59.github.io"
-          issue-term="pathname"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-  </script>
+<!-- ── Latest Posts ── -->
+<section class="latest-posts" aria-label="Latest posts">
+  <div class="latest-posts-label">Check out latest post</div>
+
+  <a class="post-card" href="simplest-way-to-get-canadian-pr.html">
+    <span class="post-card-badge">PR &amp; Immigration</span>
+    <div class="post-card-body">
+      <h3>The Simplest Way to Get Your Canadian PR (From Outside Canada)</h3>
+      <p>If you're educated and experienced, you might be closer to a Canadian PR than you think — an honest breakdown of Express Entry's CEC pathway.</p>
+    </div>
+  </a>
 </section>
 
 </body>
 </html>
- -->
