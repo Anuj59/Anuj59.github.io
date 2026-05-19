@@ -153,20 +153,121 @@
     .modal-overlay.open{display:flex}
     .modal-box{background:#fff;border-radius:12px;padding:2rem;max-width:480px;width:90%;position:relative}
     .modal-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;cursor:pointer;line-height:1}
+  
+        /* Mobile touch improvements */
+    a,button{-webkit-tap-highlight-color:rgba(0,0,0,0.05)}
+    img{max-width:100%;height:auto}
+    .hamburger{min-width:44px;min-height:44px;display:none;align-items:center;justify-content:flex-end}
+
+    /* ── MOBILE IMPROVEMENTS ── */
     @media(max-width:600px){
-      .toc ol{columns:1}
-      .nav-links{display:none}
-      .nav-links.open{display:flex;flex-direction:column;gap:0;padding:0}
-      .nav-links.open a,.nav-links.open .nav-dropdown>a{padding:12px 0;border-bottom:1px solid #222;color:#ccc}
-      .nav-links.open .dropdown-menu{display:block;position:static;border:none;background:transparent;padding-left:14px;min-width:unset}
-      .nav-links.open .dropdown-menu a{padding:9px 0;font-size:13px;border-bottom:1px solid #1a1a1a}
-      .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-      .hamburger span{width:22px;height:2px;background:#fff;display:block;border-radius:2px}
+      /* Nav */
+      header{padding:0 14px}
+      .nav-top{padding:10px 0 8px}
+      .brand-title{font-size:17px}
+      .btn-sub{padding:5px 13px;font-size:12px}
       .btn-ig{display:none}
-      header{padding:0 16px}
-      .footer-top{flex-direction:column}
+
+      /* Hero */
+      .hero{padding:32px 16px 28px}
+      .hero h1{font-size:clamp(19px,5.5vw,28px);line-height:1.3;margin-bottom:14px}
+      .hero-meta{gap:10px;font-size:12px}
+      .hero-tag{font-size:10px;margin-bottom:12px}
+
+      /* Page layout */
+      .page{padding:28px 16px 40px}
+
+      /* Typography */
+      article p{font-size:16px;line-height:1.78;margin-bottom:20px}
+      .intro-pull{font-size:17px;line-height:1.7;padding-left:14px;margin-bottom:22px}
+      h2.sh{font-size:21px;margin:36px 0 12px}
+      h3.sub-sh{font-size:18px;margin:24px 0 10px}
+
+      /* TOC */
+      .toc{padding:18px 16px;margin:24px 0}
+      .toc ol{columns:1}
+      .toc li{font-size:13px;margin-bottom:8px}
+
+      /* Callouts */
+      .callout,.callout-green,.callout-warn,.callout-info{padding:14px 16px;font-size:15px;margin:20px 0}
+
+      /* Section previews */
+      .section-preview{padding:14px 16px;margin:12px 0 6px}
+      .section-preview p{font-size:15px;line-height:1.72;margin-bottom:10px}
+
+      /* Coming soon blocks */
+      .coming-soon-block{padding:14px 16px;gap:10px;font-size:13px;flex-wrap:wrap}
+
+      /* Inline subscribe */
+      .inline-subscribe{padding:24px 16px;margin:36px 0}
+      .inline-subscribe h3{font-size:18px}
+      .inline-subscribe p{font-size:14px;margin-bottom:16px}
+      .btn-subscribe-inline,.btn-ig-inline{padding:9px 18px;font-size:13px}
+      .inline-subscribe .ig-row{gap:8px}
+
+      /* Posts grid */
+      .posts-grid{grid-template-columns:1fr}
+      .latest-posts,.related-posts{padding:0 16px 40px}
+      .post-card{padding:16px}
+      .post-card h3{font-size:15px}
+
+      /* Footer */
+      .site-footer{padding:28px 16px 20px}
+      .footer-top{flex-direction:column;gap:20px;padding-bottom:20px;margin-bottom:16px}
+      .footer-brand-title{font-size:16px}
+      .footer-bottom{font-size:11px;flex-direction:column;gap:4px}
+      .footer-tagline{font-size:12px}
+      .footer-links{flex-direction:row;flex-wrap:wrap;gap:10px 16px}
+      .footer-links a{font-size:12px}
+      .footer-cta{padding:18px 16px;gap:12px}
+      .footer-cta p{font-size:13px}
+
+      /* Def blocks / step lists etc */
+      .def-block{padding:14px 16px}
+      .step-list li{font-size:16px;gap:12px}
+      .barrier-block,.mistake-block{padding:16px}
+      .barrier-block h4,.mistake-block h4{font-size:16px}
+      .barrier-block p,.mistake-block p{font-size:15px}
+      .bridge-item p{font-size:15px}
+      .faq-q{font-size:16px}
+      .faq-a{font-size:15px}
+      .faq-item{padding:14px 16px}
+
+      /* Stats pills (about page) */
+      .stat{min-width:100px;padding:12px 14px}
+      .stat-num{font-size:22px}
+
+      /* Bio card (about page) */
+      .bio-card{flex-direction:column;align-items:center;text-align:center;padding:20px 16px;gap:16px}
+      .bio-avatar{width:72px;height:72px;font-size:26px}
+      .bio-text h2{font-size:20px}
+      .bio-text p{font-size:15px}
+
+      /* Checklist / table items */
+      .checklist li{font-size:15px}
+      table{font-size:14px}
+      table th,table td{padding:8px 10px}
+
+      /* Infographic images */
+      figure img{border-radius:6px}
+
+      /* Modal */
+      .modal-box{padding:1.4rem;margin:0 12px}
+
+      /* Nav hamburger mobile menu improvements */
+      .nav-links.open{padding-bottom:8px}
+      .nav-links.open a,.nav-links.open .nav-dropdown > a{padding:11px 0;font-size:13px}
+      .nav-links.open .dropdown-menu a{font-size:12px;padding:8px 0}
     }
-    @media(min-width:601px){.hamburger{display:none}}
+
+    /* Tablet tweaks */
+    @media(min-width:601px) and (max-width:768px){
+      .hero{padding:44px 24px}
+      .page{padding:36px 24px}
+      article p{font-size:17px}
+      .inline-subscribe{padding:28px 24px}
+    }
+
   </style>
 </head>
 
