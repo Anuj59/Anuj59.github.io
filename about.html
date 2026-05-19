@@ -46,7 +46,7 @@
     "url": "https://www.unfilteredcanada.com/about",
     "description": "Immigrant from India, living in Ontario, Canada since 2017. 8.5 years navigating immigration, work, and life in Canada.",
     "knowsAbout": ["Canadian Immigration", "Life in Canada", "Indian Immigrants in Canada", "Canadian Education", "Permanent Residency Canada"],
-    "sameAs": []
+    "sameAs": ["https://www.instagram.com/unfiltered__canada"]
   }
   </script>
 
@@ -137,6 +137,50 @@
       .stats{justify-content:center}
       .footer-cta{flex-wrap:wrap}
     }
+  
+    /* ── Instagram nav button ── */
+    .btn-ig{display:flex;align-items:center;gap:6px;border:1px solid #555;color:#aaa;background:transparent;padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;text-decoration:none;font-family:Arial,sans-serif;transition:.2s}
+    .btn-ig:hover{border-color:#fff;color:#fff}
+    .btn-ig svg{width:14px;height:14px;fill:currentColor}
+    /* ── Coming soon nav items ── */
+    .dropdown-menu .soon{display:flex;justify-content:space-between;align-items:center;padding:8px 18px;font-size:12px;color:#555;letter-spacing:.3px;text-transform:none;cursor:default}
+    .dropdown-menu .soon-badge{font-size:9px;letter-spacing:.8px;text-transform:uppercase;background:#333;color:#666;padding:2px 7px;border-radius:10px}
+    /* ── Inline subscribe block ── */
+    .inline-subscribe{background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:12px;padding:32px;margin:48px 0;text-align:center;color:#fff}
+    .inline-subscribe h3{font-size:20px;font-weight:700;margin-bottom:10px;color:#fff;font-family:Georgia,serif}
+    .inline-subscribe p{font-size:15px;color:#a8c4a8;line-height:1.65;margin-bottom:20px;font-family:Arial,sans-serif}
+    .inline-subscribe .ig-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn-subscribe-inline{background:#fff;color:#111;border:none;padding:10px 24px;border-radius:20px;font-size:14px;font-weight:700;cursor:pointer;font-family:Arial,sans-serif;transition:.2s}
+    .btn-subscribe-inline:hover{background:#e8e8e8}
+    .btn-ig-inline{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;padding:10px 20px;border-radius:20px;font-size:14px;font-family:Arial,sans-serif;text-decoration:none;transition:.2s}
+    .btn-ig-inline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+    .btn-ig-inline svg{width:16px;height:16px;fill:currentColor}
+    /* ── Related posts grid ── */
+    .related-posts{max-width:740px;margin:0 auto;padding:0 20px 56px}
+    .related-posts-label{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#888;margin-bottom:16px}
+    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+    .post-card{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid #e8e8e8;border-radius:10px;text-decoration:none;color:#1a1a1a;transition:.2s;background:#fff}
+    .post-card:hover{border-color:#111;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+    .post-card-badge{font-family:Arial,sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#888}
+    .post-card h3{font-size:15px;font-weight:700;line-height:1.4;color:#111}
+    .post-card p{font-family:Arial,sans-serif;font-size:13px;color:#666;line-height:1.55}
+    /* ── Footer ── */
+    .site-footer{background:#111;color:#fff;padding:40px 32px 28px;margin-top:0}
+    .footer-inner{max-width:740px;margin:0 auto}
+    .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #222;margin-bottom:24px}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .footer-brand-title{font-size:18px;font-weight:700;color:#fff}
+    .footer-tagline{font-family:Arial,sans-serif;font-size:13px;color:#666;line-height:1.5;max-width:300px}
+    .footer-links{display:flex;flex-direction:column;gap:8px}
+    .footer-links a{font-family:Arial,sans-serif;font-size:13px;color:#888;text-decoration:none;transition:.15s}
+    .footer-links a:hover{color:#fff}
+    .footer-social{display:flex;gap:12px;margin-top:16px}
+    .footer-ig{display:flex;align-items:center;gap:6px;background:#222;color:#ccc;padding:8px 14px;border-radius:20px;font-family:Arial,sans-serif;font-size:13px;text-decoration:none;transition:.2s}
+    .footer-ig:hover{background:#333;color:#fff}
+    .footer-ig svg{width:15px;height:15px;fill:currentColor}
+    .footer-bottom{font-family:Arial,sans-serif;font-size:12px;color:#555;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    @media(max-width:600px){.btn-ig{display:none}.footer-top{flex-direction:column}}
+
   </style>
 </head>
 
@@ -156,11 +200,13 @@
 
 <header>
   <div class="nav-top">
-    <div class="brand">
-      <img src="Unfiltered_Canada_Logo.png" style="width:38px;height:38px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada Logo">
-      <span class="brand-title">Unfiltered Canada</span>
-    </div>
-    <div class="nav-actions">
+    <a class="brand" href="/" style="text-decoration:none">
+      <img src="Unfiltered_Canada_Logo.png" style="width:38px;height:38px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada Logo"><span class="brand-title">Unfiltered Canada</span></a>
+        <div class="nav-actions">
+      <a class="btn-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @unfiltered__canada
+      </a>
       <button class="btn-sub" onclick="document.getElementById('subscribe-modal').classList.add('open')">
         Subscribe
       </button>
@@ -170,24 +216,18 @@
     <a href="/">Home</a>
     <div class="nav-dropdown">
       <a href="#">Posts</a>
-      <div class="dropdown-menu">
-         <a href="simplest-way-to-get-canadian-pr.html">Simplest Way to get PR</a>
+            <div class="dropdown-menu">
         <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Is a Canadian Education Worth It?</a>
-        <a href="#">The Reality of Finding Your First Job</a>
-        <a href="#">The "Survival" vs. "Field" Job Gap</a>
-        <a href="#">State of the 2026 Job Market</a>
-        <a href="#">Canadian Workplace Culture</a>
-        <a href="#">Earning Potential: Expectation vs. Reality</a>
-        <a href="#">The True Cost of Living</a>
-        <a href="#">Surviving the Chilly Winters</a>
-        <a href="#">The Rent Crisis: What $2,500 Gets You</a>
-        <a href="#">Getting Around: Transportation</a>
-        <a href="#">Food: The Taste of Home vs. Grocery Bills</a>
-        <a href="#">The Hidden Mental Toll of Immigration</a>
-        <a href="#">Navigating New 2026 Permit Rules</a>
-        <a href="#">The Long PR Journey</a>
-        <a href="#">An Honest Talk About Racism</a>
-        <a href="#">Decision-Making Questionnaire</a>
+        <a href="The_Reality_of_First_Job.html">The Reality of Finding Your First Job</a>
+        <a href="survival-vs-field-job-gap.html">The "Survival" vs. "Field" Job Gap</a>
+        <a href="simplest-way-to-get-canadian-pr.html">The Simplest Way to Get Canadian PR</a>
+        <span class="soon">State of the 2026 Job Market <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">Canadian Workplace Culture <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">Earning Potential: Expectation vs. Reality <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">The True Cost of Living <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">The Rent Crisis: What $2,500 Gets You <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">The Hidden Mental Toll of Immigration <span class="soon-badge">Coming Soon</span></span>
+        <span class="soon">An Honest Talk About Racism <span class="soon-badge">Coming Soon</span></span>
       </div>
     </div>
     <a href="/about" class="active">About</a>
@@ -298,5 +338,47 @@
     });
   })();
 </script>
+
+<section class="related-posts" aria-label="Related posts">
+  <div class="related-posts-label">Read next</div>
+  <div class="posts-grid">
+    <a class="post-card" href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html"><span class="post-card-badge">Education</span><h3>Is a Canadian Education Worth It?</h3><p>The real ROI of a Canadian diploma vs. a university degree.</p></a>
+    <a class="post-card" href="The_Reality_of_First_Job.html"><span class="post-card-badge">Jobs</span><h3>The Reality of Finding Your First Job</h3><p>What no one tells you about landing that first Canadian job.</p></a>
+    <a class="post-card" href="survival-vs-field-job-gap.html"><span class="post-card-badge">Career</span><h3>The Survival Job vs. Field Job Gap</h3><p>Why many immigrants stay stuck longer than expected.</p></a>
+  </div>
+</section>
+
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="Unfiltered_Canada_Logo.png" style="width:36px;height:36px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada">
+          <span class="footer-brand-title">Unfiltered Canada</span>
+        </div>
+        <p class="footer-tagline">Real life. Real stories. Real Canada.<br>Written by an immigrant, for immigrants.</p>
+        <div class="footer-social">
+          <a class="footer-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @unfiltered__canada
+          </a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Canadian Education</a>
+        <a href="The_Reality_of_First_Job.html">Finding Your First Job</a>
+        <a href="survival-vs-field-job-gap.html">Survival vs. Field Job Gap</a>
+        <a href="simplest-way-to-get-canadian-pr.html">Getting Canadian PR</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Unfiltered Canada · Anuj Vaghela</span>
+      <span>Personal opinions only — not legal, immigration, or financial advice.</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
