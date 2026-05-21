@@ -1,8 +1,8 @@
 # robots.txt for unfilteredcanada.com
-# Allow all crawlers to index the site
+# Allow all crawlers to index the entire site
 
 User-agent: *
 Allow: /
 
-# Point crawlers to your sitemap
+# Sitemap location
 Sitemap: https://www.unfilteredcanada.com/sitemap.xml
