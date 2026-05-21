@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G7SPR88LS"></script>
@@ -13,6 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <meta name="theme-color" content="#111111">
   <!-- ═══════════════════════════════════════════════
        PRIMARY SEO META TAGS
   ════════════════════════════════════════════════ -->
@@ -32,6 +33,8 @@
   <meta property="og:url" content="https://www.unfilteredcanada.com/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">
   <meta property="og:site_name" content="Unfiltered Canada">
   <meta property="og:image" content="https://www.unfilteredcanada.com/Unfiltered_Canada_Logo.png">
+  <meta property="og:image:width" content="1254">
+  <meta property="og:image:height" content="1254">
   <meta property="og:locale" content="en_CA">
   <meta property="article:author" content="Anuj Vaghela">
   <meta property="article:published_time" content="2026-05-08T00:00:00+00:00">
@@ -45,6 +48,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Is a Canadian Education Worth It for Immigrants?">
   <meta name="twitter:description" content="An honest cost-vs-outcome analysis of studying in Canada as an immigrant. No fluff, just numbers and lived experience.">
+  <meta name="twitter:image" content="https://www.unfilteredcanada.com/Unfiltered_Canada_Logo.png">
 
   <!-- ═══════════════════════════════════════════════
        STRUCTURED DATA — Article Schema
@@ -382,48 +386,152 @@
       .inline-subscribe{padding:28px 24px}
     }
 
+  
+    /* ===================================================================
+       UNIFIED HEADER / FOOTER SYSTEM  (shared across every page)
+       =================================================================== */
+
+    /* Skip link — accessibility + crawlability */
+    .skip-link{position:absolute;top:-48px;left:0;background:#111;color:#fff;padding:8px 16px;font-size:14px;font-family:Arial,Helvetica,sans-serif;text-decoration:none;z-index:9999;border-radius:0 0 6px 0;transition:top .2s}
+    .skip-link:focus{top:0}
+
+    /* Header / Nav */
+    header{background:#111;color:#fff;padding:0 32px;position:sticky;top:0;z-index:100}
+    .nav-top{display:flex;align-items:center;justify-content:space-between;padding:14px 0 12px;border-bottom:1px solid #333}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand-title{font-size:20px;font-weight:700;color:#fff;font-family:Georgia,serif}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+
+    .btn-ig{display:flex;align-items:center;gap:6px;border:1px solid #555;color:#aaa;background:transparent;padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;text-decoration:none;font-family:Arial,Helvetica,sans-serif;transition:.2s;white-space:nowrap}
+    .btn-ig:hover{border-color:#fff;color:#fff}
+    .btn-ig svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+
+    .btn-sub{background:#fff;color:#111;border:none;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;transition:background .3s,color .3s,box-shadow .3s;font-family:Arial,Helvetica,sans-serif;white-space:nowrap}
+    .btn-sub:hover{background:#e8e8e8}
+    @keyframes purplePulse{
+      0%{background:#fff;color:#111;box-shadow:0 0 0 0 rgba(149,76,233,.7)}
+      15%{background:#7c3aed;color:#fff;box-shadow:0 0 0 8px rgba(149,76,233,.4)}
+      35%{background:#a855f7;color:#fff;box-shadow:0 0 0 14px rgba(149,76,233,.15)}
+      55%{background:#7c3aed;color:#fff;box-shadow:0 0 0 8px rgba(149,76,233,.25)}
+      75%{background:#9333ea;color:#fff;box-shadow:0 0 0 4px rgba(149,76,233,.1)}
+      100%{background:#fff;color:#111;box-shadow:0 0 0 0 rgba(149,76,233,0)}
+    }
+    .btn-sub.pulse-once{animation:purplePulse 1.8s ease-out forwards}
+
+    /* Hamburger (mobile only) */
+    .hamburger{display:none;background:transparent;border:1px solid #555;border-radius:8px;width:40px;height:36px;cursor:pointer;align-items:center;justify-content:center;padding:0}
+    .hamburger:hover{border-color:#fff}
+    .hamburger span{display:block;width:18px;height:2px;background:#ddd;position:relative}
+    .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:#ddd}
+    .hamburger span::before{top:-6px}
+    .hamburger span::after{top:6px}
+
+    /* Main nav row */
+    .nav-links{display:flex;gap:24px;padding:10px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.8px;text-transform:uppercase;align-items:center}
+    .nav-links a{color:#aaa;text-decoration:none;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active,.nav-links a[aria-current="page"]{color:#fff}
+
+    /* Posts dropdown */
+    .nav-dropdown{position:relative}
+    .nav-dropdown > a::after{content:"▾";margin-left:5px;font-size:10px;vertical-align:middle}
+    .nav-dropdown .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#1c1c1c;border:1px solid #333;border-radius:8px;min-width:330px;padding:8px 0;z-index:200;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+    .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;color:#ccc;text-decoration:none;padding:9px 18px;font-size:12px;letter-spacing:.4px;text-transform:none;transition:.15s}
+    .dropdown-menu a:hover{color:#fff;background:#2a2a2a}
+    .dropdown-menu .soon{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:8px 18px;font-size:12px;color:#666;letter-spacing:.3px;text-transform:none;cursor:default}
+    .dropdown-menu .soon-badge{font-size:9px;letter-spacing:.8px;text-transform:uppercase;background:#2a2a2a;color:#888;padding:2px 7px;border-radius:10px;white-space:nowrap}
+    .dropdown-divider{height:1px;background:#2c2c2c;margin:6px 0}
+
+    /* Footer */
+    .site-footer{background:#111;color:#fff;padding:40px 32px 28px;margin-top:64px;font-family:Arial,Helvetica,sans-serif}
+    .footer-inner{max-width:960px;margin:0 auto}
+    .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #222;margin-bottom:24px}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:10px;text-decoration:none}
+    .footer-brand-title{font-size:18px;font-weight:700;color:#fff;font-family:Georgia,serif}
+    .footer-tagline{font-size:13px;color:#888;line-height:1.5;max-width:320px}
+    .footer-links{display:flex;flex-direction:column;gap:8px}
+    .footer-links a{font-size:13px;color:#999;text-decoration:none;transition:.15s}
+    .footer-links a:hover{color:#fff}
+    .footer-social{display:flex;gap:12px;margin-top:16px}
+    .footer-ig{display:flex;align-items:center;gap:6px;background:#222;color:#ccc;padding:8px 14px;border-radius:20px;font-size:13px;text-decoration:none;transition:.2s}
+    .footer-ig:hover{background:#333;color:#fff}
+    .footer-ig svg{width:15px;height:15px;fill:currentColor}
+    .footer-bottom{font-size:12px;color:#666;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+    /* Subscribe modal */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;align-items:center;justify-content:center}
+    .modal-overlay.open{display:flex}
+    .modal-box{background:#fff;border-radius:12px;padding:24px;max-width:480px;width:90%;position:relative}
+    .modal-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;line-height:1}
+
+    /* Shared header/footer responsive */
+    @media(max-width:768px){
+      header{padding:0 16px}
+      .site-footer{padding:32px 16px 22px}
+      .footer-inner{max-width:100%}
+      .footer-top{flex-direction:column;gap:20px;padding-bottom:20px;margin-bottom:18px}
+      .footer-links{flex-direction:row;flex-wrap:wrap;gap:10px 18px}
+      .footer-bottom{flex-direction:column;gap:4px}
+      .hamburger{display:flex}
+      .nav-links{display:none;flex-direction:column;align-items:flex-start;gap:2px;padding:6px 0 10px;text-transform:none;letter-spacing:.3px;font-size:13px}
+      .nav-links.open{display:flex}
+      .nav-links.open a,.nav-links.open .nav-dropdown{width:100%}
+      .nav-links.open .nav-dropdown > a::after{content:""}
+      .nav-links.open a{padding:11px 4px;border-bottom:1px solid #222}
+      .nav-dropdown .dropdown-menu{display:block;position:static;min-width:0;border:none;background:transparent;box-shadow:none;padding:2px 0 6px 14px}
+      .dropdown-menu a{padding:8px 4px;font-size:12px}
+      .nav-dropdown > a::after{display:none}
+      .modal-box{padding:20px;margin:0 12px}
+    }
+
   </style>
+
+  <!-- Performance: preconnect / dns-prefetch for third-party origins -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://subscribe-forms.beehiiv.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://docs.google.com">
 </head>
 
 <body>
 
-<div class="modal-overlay" id="subscribe-modal"
-     onclick="if(event.target===this) this.classList.remove('open')">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="modal-overlay" id="subscribe-modal" role="dialog" aria-modal="true" aria-label="Subscribe to Unfiltered Canada" onclick="if(event.target===this) this.classList.remove('open')">
   <div class="modal-box">
-    <button class="modal-close"
-            onclick="document.getElementById('subscribe-modal').classList.remove('open')">
-      &times;
-    </button>
+    <button class="modal-close" onclick="document.getElementById('subscribe-modal').classList.remove('open')" aria-label="Close subscribe dialog">&times;</button>
     <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="feedf2fc-403b-4ac8-ae26-e39d079c1168"></script>
   </div>
 </div>
 
-<header>
+<header role="banner">
   <div class="nav-top">
-    <a class="brand" href="/" style="text-decoration:none">
-      <img src="Unfiltered_Canada_Logo.png" style="width:38px;height:38px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada Logo"><span class="brand-title">Unfiltered Canada</span></a>
-        <div class="nav-actions">
-      <a class="btn-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @unfiltered__canada
+    <a class="brand" href="/" aria-label="Unfiltered Canada home">
+      <img src="/Unfiltered_Canada_Logo.png" width="38" height="38" style="object-fit:contain;border-radius:3px;" alt="Unfiltered Canada: honest immigrant perspectives on life in Canada" fetchpriority="high">
+      <span class="brand-title">Unfiltered Canada</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener noreferrer" aria-label="Follow Unfiltered Canada on Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>Follow</span>
       </a>
-      <button class="btn-sub" onclick="document.getElementById('subscribe-modal').classList.add('open')">
-        Subscribe
-      </button>
+      <button class="btn-sub" onclick="document.getElementById('subscribe-modal').classList.add('open')" aria-label="Subscribe to the Unfiltered Canada newsletter">Subscribe</button>
+      <button class="hamburger" onclick="document.getElementById('primary-nav').classList.toggle('open')" aria-label="Toggle navigation menu" aria-controls="primary-nav" aria-expanded="false"><span></span></button>
     </div>
   </div>
-  <nav class="nav-links" aria-label="Main navigation">
+  <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
     <a href="/">Home</a>
     <div class="nav-dropdown">
-      <a href="/posts">Posts</a>
-            <div class="dropdown-menu">
-        <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Is a Canadian Education Worth It?</a>
-        <a href="The_Reality_of_First_Job.html">The Reality of Finding Your First Job</a>
-        <a href="survival-vs-field-job-gap.html">The "Survival" vs. "Field" Job Gap</a>
-        <a href="simplest-way-to-get-canadian-pr.html">The Simplest Way to Get Canadian PR</a>
+      <a href="/#articles">Articles</a>
+      <div class="dropdown-menu">
+        <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Is a Canadian Education Worth It?</a>
+        <a href="/The_Reality_of_First_Job.html">The Reality of Finding Your First Job</a>
+        <a href="/survival-vs-field-job-gap.html">The Survival vs. Field Job Gap</a>
+        <a href="/simplest-way-to-get-canadian-pr.html">The Simplest Way to Get Canadian PR</a>
+        <div class="dropdown-divider"></div>
         <span class="soon">State of the 2026 Job Market <span class="soon-badge">Coming Soon</span></span>
         <span class="soon">Canadian Workplace Culture <span class="soon-badge">Coming Soon</span></span>
-        <span class="soon">Earning Potential: Expectation vs. Reality <span class="soon-badge">Coming Soon</span></span>
         <span class="soon">The True Cost of Living <span class="soon-badge">Coming Soon</span></span>
         <span class="soon">The Rent Crisis: What $2,500 Gets You <span class="soon-badge">Coming Soon</span></span>
         <span class="soon">The Hidden Mental Toll of Immigration <span class="soon-badge">Coming Soon</span></span>
@@ -434,7 +542,9 @@
   </nav>
 </header>
 
-<main>
+
+
+<main id="main-content">
 
   <div class="hero">
     <div class="hero-tag">Education &amp; Career</div>
@@ -636,65 +746,83 @@
 
 </main>
 
-
-
-<!-- COMMENTS 
-<section class="comments" aria-label="Comments">
-  <h3>Leave a comment</h3>
-  <p class="c-prompt">Which part of this resonated most?</p>
-
-  <!-- Utterances Comments System 
-  <script src="https://utteranc.es/client.js"
-          repo="Anuj59/Anuj59.github.io"
-          issue-term="pathname"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-  </script>
-</section>
-
-
-<section class="related-posts" aria-label="Related posts">
-  <div class="related-posts-label">Read next</div>
+<section class="related-posts" aria-labelledby="read-next-heading">
+  <div class="related-posts-label" id="read-next-heading">Read next</div>
   <div class="posts-grid">
-    <a class="post-card" href="The_Reality_of_First_Job.html"><span class="post-card-badge">Jobs</span><h3>The Reality of Finding Your First Job</h3><p>What no one tells you about landing that first Canadian job.</p></a>
-    <a class="post-card" href="survival-vs-field-job-gap.html"><span class="post-card-badge">Career</span><h3>The Survival Job vs. Field Job Gap</h3><p>Why many immigrants stay stuck longer than expected.</p></a>
-    <a class="post-card" href="simplest-way-to-get-canadian-pr.html"><span class="post-card-badge">PR & Immigration</span><h3>The Simplest Way to Get Canadian PR</h3><p>If you're educated and experienced, you may be closer than you think.</p></a>
+      <a class="post-card" href="/The_Reality_of_First_Job.html">
+        <span class="post-card-badge">Jobs</span>
+        <h3>The Reality of Finding Your First Job</h3>
+        <p>What no one tells you about landing that first Canadian job as a new immigrant.</p>
+      </a>
+      <a class="post-card" href="/survival-vs-field-job-gap.html">
+        <span class="post-card-badge">Career</span>
+        <h3>The Survival Job vs. Field Job Gap</h3>
+        <p>Why so many immigrants stay stuck in survival jobs far longer than expected, and how to escape.</p>
+      </a>
+      <a class="post-card" href="/simplest-way-to-get-canadian-pr.html">
+        <span class="post-card-badge">Immigration</span>
+        <h3>The Simplest Way to Get Canadian PR</h3>
+        <p>If you're educated and experienced, you may be closer to permanent residency than you think.</p>
+      </a>
   </div>
 </section>
 
-<footer class="site-footer" aria-label="Site footer">
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">
-          <img src="Unfiltered_Canada_Logo.png" style="width:36px;height:36px;object-fit:contain;border-radius:3px;" alt="Unfiltered Canada">
+        <a class="footer-brand" href="/" aria-label="Unfiltered Canada home">
+          <img src="/Unfiltered_Canada_Logo.png" width="36" height="36" style="object-fit:contain;border-radius:3px;" alt="Unfiltered Canada logo" loading="lazy">
           <span class="footer-brand-title">Unfiltered Canada</span>
-        </div>
+        </a>
         <p class="footer-tagline">Real life. Real stories. Real Canada.<br>Written by an immigrant, for immigrants.</p>
         <div class="footer-social">
-          <a class="footer-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            @unfiltered__canada
+          <a class="footer-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener noreferrer" aria-label="Follow Unfiltered Canada on Instagram (@unfiltered__canada)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>@unfiltered__canada</span>
           </a>
         </div>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/">Home</a>
-        <a href="Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Canadian Education</a>
-        <a href="The_Reality_of_First_Job.html">Finding Your First Job</a>
-        <a href="survival-vs-field-job-gap.html">Survival vs. Field Job Gap</a>
-        <a href="simplest-way-to-get-canadian-pr.html">Getting Canadian PR</a>
+        <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Canadian Education</a>
+        <a href="/The_Reality_of_First_Job.html">Finding Your First Job</a>
+        <a href="/survival-vs-field-job-gap.html">Survival vs. Field Job Gap</a>
+        <a href="/simplest-way-to-get-canadian-pr.html">Getting Canadian PR</a>
         <a href="/about">About</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Unfiltered Canada · Anuj Vaghela</span>
-      <span>Personal opinions only — not legal, immigration, or financial advice.</span>
+      <span>&copy; 2026 Unfiltered Canada &middot; Anuj Vaghela</span>
+      <span>Personal opinions only. Not legal, immigration, or financial advice.</span>
     </div>
   </div>
 </footer>
 
+<script>
+  /* Subscribe button pulse when reader nears the bottom (max 3 times) */
+  (function(){
+    var count=0, atBottom=false;
+    var btn=document.querySelector('.nav-top .btn-sub');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+      if(count>=3) return;
+      var scrolled=window.scrollY+window.innerHeight;
+      var total=document.documentElement.scrollHeight;
+      var nearBottom=scrolled>=total-120;
+      if(nearBottom && !atBottom){
+        atBottom=true; count++;
+        btn.classList.remove('pulse-once'); void btn.offsetWidth; btn.classList.add('pulse-once');
+        btn.addEventListener('animationend', function(){ btn.classList.remove('pulse-once'); }, {once:true});
+      } else if(!nearBottom){ atBottom=false; }
+    }, {passive:true});
+  })();
+</script>
+
+
+<script>
+  (function(){var ham=document.querySelector('.hamburger');if(ham){ham.addEventListener('click',function(){var exp=ham.getAttribute('aria-expanded')==='true';ham.setAttribute('aria-expanded',String(!exp));});}})();
+</script>
+
 </body>
 </html>
--->
