@@ -87,7 +87,19 @@
     
     /* Profile Summary Section */
     .author-card { background: #f9f9f9; border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; margin-bottom: 48px; display: flex; gap: 24px; align-items: center; }
-    .author-avatar { width: 64px; height: 64px; background: var(--bg-blue); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; flex-shrink: 0; font-family: Arial, sans-serif; }
+    .author-avatar { 
+  width: 64px; 
+  height: 64px; 
+  border-radius: 50%; 
+  flex-shrink: 0; 
+  overflow: hidden; /* Keeps the image perfectly circular */
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures your face stays centered and proportional */
+}
     .author-info h2 { font-family: Arial, sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #777; margin-bottom: 6px; }
     .author-info p { font-size: 16px; color: #333; line-height: 1.6; }
 
@@ -186,7 +198,7 @@
   <main class="container">
     
     <section class="author-card" aria-label="Author Statement">
-      <div class="author-avatar">AV</div>
+      <div class="author-avatar"><img src="my_photo.png" alt="Anuj Vaghela"></div>
       <div class="author-info">
         <h2>About the Project</h2>
         <p>I moved to Ontario from India in 2017. After 8.5 years navigating the transition from an international student to a temporary worker, and eventually a Permanent Resident, I am writing an unvarnished analysis of how the system functions on the ground. No consultant pitches. No fluff.</p>
