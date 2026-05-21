@@ -1,38 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage / main article -->
-  <url>
-    <loc>https://www.unfilteredcanada.com/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- About page -->
-  <url>
-    <loc>https://www.unfilteredcanada.com/about.html</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Blog post: Is a Canadian Education Worth It for Immigrants? -->
-  <url>
-    <loc>https://www.unfilteredcanada.com/Is_a_Canadian_Education_Worth_It_for_Immigrants.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Add new blog post pages below as you publish them -->
-  <!-- Example:
-  <url>
-    <loc>https://www.unfilteredcanada.com/posts/canada-job-market-2026</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
-
+<!--  Homepage  -->
+<url>
+<loc>https://www.unfilteredcanada.com/</loc>
+<lastmod>2026-05-20</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<!--  About page  -->
+<url>
+<loc>https://www.unfilteredcanada.com/about</loc>
+<lastmod>2026-05-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<!--  Article: Is a Canadian Education Worth It for Immigrants?  -->
+<url>
+<loc>https://www.unfilteredcanada.com/Is_a_Canadian_Education_Worth_It_for_Immigrants.html</loc>
+<lastmod>2026-05-08</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Article: The Reality of Finding Your First Job in Canada  -->
+<url>
+<loc>https://www.unfilteredcanada.com/The_Reality_of_First_Job.html</loc>
+<lastmod>2026-05-13</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Article: The Survival Job vs. Field Job Gap  -->
+<url>
+<loc>https://www.unfilteredcanada.com/survival-vs-field-job-gap.html</loc>
+<lastmod>2026-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Article: The Simplest Way to Get Canadian PR  -->
+<url>
+<loc>https://www.unfilteredcanada.com/simplest-way-to-get-canadian-pr.html</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
