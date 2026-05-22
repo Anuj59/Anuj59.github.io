@@ -3,7 +3,7 @@ This XML file does not appear to have any style information associated with it. 
 <!--  Homepage  -->
 <url>
 <loc>https://www.unfilteredcanada.com/</loc>
-<lastmod>2026-05-20</lastmod>
+<lastmod>2026-05-21</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
@@ -39,6 +39,13 @@ This XML file does not appear to have any style information associated with it. 
 <url>
 <loc>https://www.unfilteredcanada.com/simplest-way-to-get-canadian-pr.html</loc>
 <lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Article: Cost of Renting in Ontario for Newcomers 2026  -->
+<url>
+<loc>https://www.unfilteredcanada.com/cost-of-renting-ontario-newcomers-2026.html</loc>
+<lastmod>2026-05-21</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
