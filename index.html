@@ -205,9 +205,9 @@
     .dropdown-divider{height:1px;background:#2c2c2c;margin:6px 0}
 
     /* Footer */
-    .site-footer{background:#111;color:#fff;padding:40px 32px 28px;margin-top:64px;font-family:Arial,Helvetica,sans-serif}
+    .site-footer{background:#111;color:#fff;padding:14px 32px 10px;margin-top:32px;font-family:Arial,Helvetica,sans-serif}
     .footer-inner{max-width:960px;margin:0 auto}
-    .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #222;margin-bottom:24px}
+    .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid #222;margin-bottom:12px}
     .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:10px;text-decoration:none}
     .footer-brand-title{font-size:18px;font-weight:700;color:#fff;font-family:Georgia,serif}
     .footer-tagline{font-size:13px;color:#888;line-height:1.5;max-width:320px}
@@ -238,9 +238,9 @@
       .btn-ig{display:none}
       .btn-sub{padding:5px 10px;font-size:11px;max-width:80px}
       .hamburger{width:38px;height:34px}
-      .site-footer{padding:32px 16px 22px}
+      .site-footer{padding:16px 16px 11px}
       .footer-inner{max-width:100%}
-      .footer-top{flex-direction:column;gap:20px;padding-bottom:20px;margin-bottom:18px}
+      .footer-top{flex-direction:column;gap:20px;padding-bottom:10px;margin-bottom:9px}
       .footer-links{flex-direction:row;flex-wrap:wrap;gap:10px 18px}
       .footer-bottom{flex-direction:column;gap:4px}
       .hamburger{display:flex}
@@ -439,33 +439,32 @@
 
   </main>
 
+<!-- REPLACE YOUR EXISTING <footer> ... </footer> BLOCK WITH THIS -->
+
 <footer class="site-footer" role="contentinfo" aria-label="Site footer">
   <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <a class="footer-brand" href="/" aria-label="Unfiltered Canada home">
-          <img src="/Unfiltered_Canada_Logo.png" width="36" height="36" style="object-fit:contain;border-radius:3px;" alt="Unfiltered Canada logo" loading="lazy">
-          <span class="footer-brand-title">Unfiltered Canada</span>
-        </a>
-        <p class="footer-tagline">Real life. Real stories. Real Canada.<br>Written by an immigrant, for immigrants.</p>
-        <div class="footer-social">
-          <a class="footer-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener noreferrer" aria-label="Follow Unfiltered Canada on Instagram (@unfiltered__canada)">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            <span>@unfiltered__canada</span>
-          </a>
-        </div>
-      </div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/">Home</a>
-        <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Canadian Education</a>
-        <a href="/The_Reality_of_First_Job.html">Finding Your First Job</a>
-        <a href="/survival-vs-field-job-gap.html">Survival vs. Field Job Gap</a>
-        <a href="/simplest-way-to-get-canadian-pr.html">Getting Canadian PR</a>
-        <a href="/cost-of-renting-ontario-newcomers-2026.html">Cost of Renting in Ontario</a>
-        <a href="/about">About</a>
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-bottom:12px; border-bottom:1px solid #222; margin-bottom:10px;">
+      
+      <!-- Left: Brand -->
+      <a class="footer-brand" href="/" aria-label="Unfiltered Canada home" style="margin-bottom:0;">
+        <img src="/Unfiltered_Canada_Logo.png" width="28" height="28" style="object-fit:contain;border-radius:3px;" alt="Unfiltered Canada logo" loading="lazy">
+        <span class="footer-brand-title" style="font-size:15px;">Unfiltered Canada</span>
+      </a>
+
+      <!-- Center: Nav links -->
+      <nav style="display:flex; gap:16px; align-items:center;" aria-label="Footer navigation">
+        <a href="/" style="font-size:12px; color:#999; text-decoration:none; font-family:Arial,Helvetica,sans-serif; transition:.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#999'">Home</a>
+        <a href="/about" style="font-size:12px; color:#999; text-decoration:none; font-family:Arial,Helvetica,sans-serif; transition:.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#999'">About</a>
       </nav>
+
+      <!-- Right: Instagram -->
+      <a class="footer-ig" href="https://www.instagram.com/unfiltered__canada" target="_blank" rel="noopener noreferrer" aria-label="Follow Unfiltered Canada on Instagram" style="padding:5px 12px; font-size:12px;">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:13px;height:13px;fill:currentColor;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>@unfiltered__canada</span>
+      </a>
+
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom" style="padding-top:0; font-size:11px;">
       <span>&copy; 2026 Unfiltered Canada &middot; Anuj Vaghela</span>
       <span>Personal opinions only. Not legal, immigration, or financial advice.</span>
     </div>
