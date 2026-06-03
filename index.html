@@ -36,7 +36,6 @@
 
   <link rel="icon" type="image/png" href="/Unfiltered_Canada_Logo.png">
 
-  <!-- ============== STRUCTURED DATA ============== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,32 +75,32 @@
       {
         "@type": "Question",
         "name": "Is immigrating to Canada still worth it in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "It depends on your field, your savings runway and your patience. The opportunity is real, but so are the slower job market, higher rents and the survival job phase that most agents never mention. The honest answer is that Canada rewards people who arrive with a clear plan and a financial cushion, and punishes those who arrive expecting the brochure version." }
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on your field, your savings runway and your patience. The opportunity is real, but so are the slower job market, higher rents and the survival job phase that most agents never mention." }
       },
       {
         "@type": "Question",
         "name": "How hard is it to find a job in Canada as a newcomer?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Harder than most expect. Many applications disappear into automated tracking systems before a human reads them. Newcomers often take a survival job first, then work toward a role in their actual field. Referrals, a Canadian style resume and steady networking matter far more than raw application volume." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Harder than most expect. Many applications disappear into automated tracking systems before a human reads them. Referrals, a Canadian style resume and steady networking matter far more than raw application volume." }
       },
       {
         "@type": "Question",
         "name": "What is the difference between a survival job and a field job?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A survival job pays the bills right away, often at or near minimum wage. A field job is the role you trained for and the one that builds your long term career. The trap is getting comfortable in survival work and losing momentum toward the field role you came for." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A survival job pays the bills right away, often at or near minimum wage. A field job is the role you trained for and the one that builds your long term career." }
       },
       {
         "@type": "Question",
         "name": "How much rent should a newcomer budget in Ontario in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Plan carefully. A budget around 2,500 dollars stretches very differently across cities, and newcomers also face deposits, no credit history and the challenge of paying from abroad. Knowing the hidden costs before you land saves a lot of stress in the first months." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Plan carefully. A budget around 2,500 dollars stretches very differently across cities, and newcomers also face deposits, no credit history and the challenge of paying from abroad." }
       },
       {
         "@type": "Question",
         "name": "What is the simplest path to Canadian permanent residence?",
-        "acceptedAnswer": { "@type": "Answer", "text": "There is no single simple path, but some routes are far more reachable than others depending on your score, your occupation and the province you target. The key is matching your profile to a stream where you are genuinely competitive rather than chasing the most crowded one." }
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no single simple path, but some routes are far more reachable than others depending on your score, your occupation and the province you target." }
       },
       {
         "@type": "Question",
         "name": "Is a Canadian education worth the cost for immigrants?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sometimes. The value depends on the program, the school and how the 2026 entry level market treats that credential. A clear return on investment view, tuition against realistic starting salaries, matters more than the marketing of any college." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Sometimes. The value depends on the program, the school and how the 2026 entry level market treats that credential." }
       }
     ]
   }
@@ -110,7 +109,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@500;600;700&display=swap" rel="stylesheet">
-
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://subscribe-forms.beehiiv.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
@@ -142,7 +140,7 @@
       -webkit-font-smoothing:antialiased;
       overflow-x:hidden;
     }
-    /* paper grain overlay */
+
     body::before{
       content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
@@ -154,85 +152,119 @@
     .kicker{font-family:"Archivo",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700;color:var(--red)}
     .label{font-family:"Archivo",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700}
 
-    /* ============ SKIP LINK ============ */
+    /* === SKIP LINK === */
     .skip-link{position:absolute;top:-48px;left:0;background:var(--ink);color:#fff;padding:8px 16px;font-family:"Archivo",sans-serif;font-size:13px;text-decoration:none;z-index:9999;border-radius:0 0 6px 0;transition:top .2s}
     .skip-link:focus{top:0}
 
-    /* ============ MASTHEAD ============ */
-    header{position:sticky;top:0;z-index:100;background:rgba(246,242,233,.92);backdrop-filter:blur(8px);border-bottom:3px double var(--rule-strong)}
+    /* === PROGRESS BAR === */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--red);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none}
+
+    /* === MASTHEAD === */
+    header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(246,242,233,.93);
+      backdrop-filter:blur(10px);
+      border-bottom:3px double var(--rule-strong);
+      transition:box-shadow .35s;
+    }
+    header.scrolled{box-shadow:0 4px 30px rgba(28,24,19,.12)}
     .nav-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
-    .brand img{width:40px;height:40px;object-fit:contain;border-radius:3px}
+    .brand img{width:40px;height:40px;object-fit:contain;border-radius:3px;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+    .brand:hover img{transform:rotate(-7deg) scale(1.1)}
     .brand-title{font-family:"Fraunces",serif;font-weight:900;font-size:24px;letter-spacing:-.01em;line-height:1;color:var(--ink)}
     .brand-sub{display:block;font-family:"Archivo",sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-top:3px}
 
     .nav-actions{display:flex;gap:10px;align-items:center}
-    .btn-ig{display:flex;align-items:center;gap:6px;border:1px solid var(--rule);color:var(--ink-soft);background:transparent;padding:7px 13px;border-radius:2px;font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;white-space:nowrap}
-    .btn-ig:hover{border-color:var(--ink);color:var(--ink)}
+    .btn-ig{display:flex;align-items:center;gap:6px;border:1px solid var(--rule);color:var(--ink-soft);background:transparent;padding:7px 13px;border-radius:2px;font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;transition:.25s;white-space:nowrap}
+    .btn-ig:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
     .btn-ig svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
-    .btn-sub{background:var(--red);color:#fff;border:none;padding:8px 18px;border-radius:2px;font-family:"Archivo",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:.25s;white-space:nowrap}
-    .btn-sub:hover{background:var(--red-deep)}
+
+    .btn-sub{background:var(--red);color:#fff;border:none;padding:8px 18px;border-radius:2px;font-family:"Archivo",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:.25s;white-space:nowrap;position:relative;overflow:hidden}
+    .btn-sub::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.18);transform:translateX(-110%) skewX(-15deg);transition:transform .4s}
+    .btn-sub:hover::after{transform:translateX(110%) skewX(-15deg)}
+    .btn-sub:hover{background:var(--red-deep);transform:translateY(-1px)}
 
     .hamburger{display:none;background:transparent;border:1px solid var(--rule);border-radius:3px;width:40px;height:38px;cursor:pointer;align-items:center;justify-content:center}
     .hamburger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
-    .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+    .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .3s, top .3s}
     .hamburger span::before{top:-6px}.hamburger span::after{top:6px}
 
     .nav-links{display:flex;gap:26px;padding:9px 0;font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;align-items:center;border-top:1px solid var(--rule)}
-    .nav-links a{color:var(--ink-soft);text-decoration:none;transition:.2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--red)}
+    .nav-links > a{color:var(--ink-soft);text-decoration:none;transition:.2s;position:relative}
+    .nav-links > a::after{content:"";position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--red);transition:width .25s}
+    .nav-links > a:hover,.nav-links > a.active{color:var(--red)}
+    .nav-links > a:hover::after,.nav-links > a.active::after{width:100%}
     .nav-dropdown{position:relative}
-    .nav-dropdown > a::after{content:"▾";margin-left:5px;font-size:9px}
-    .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--rule);border-radius:4px;min-width:340px;padding:8px 0;z-index:200;box-shadow:0 18px 40px rgba(28,24,19,.18)}
+    .nav-dropdown > a::after{content:"▾";margin-left:5px;font-size:9px;position:static;background:none;height:auto;width:auto}
+    .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--rule);border-radius:4px;min-width:340px;padding:8px 0;z-index:200;box-shadow:0 18px 40px rgba(28,24,19,.18);animation:drop-in .18s ease}
+    @keyframes drop-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
     .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:block}
-    .dropdown-menu a{display:block;color:var(--ink-soft);text-decoration:none;padding:9px 18px;font-size:13px;letter-spacing:.02em;text-transform:none;font-family:"Newsreader",serif;transition:.15s}
-    .dropdown-menu a:hover{color:var(--ink);background:var(--paper-2)}
+    .dropdown-menu a{display:block;color:var(--ink-soft);text-decoration:none;padding:9px 18px;font-size:13px;letter-spacing:.02em;text-transform:none;font-family:"Newsreader",serif;transition:padding .15s, color .15s, background .15s}
+    .dropdown-menu a:hover{color:var(--ink);background:var(--paper-2);padding-left:24px}
     .dropdown-menu .soon{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:8px 18px;font-size:13px;color:var(--ink-faint);text-transform:none;font-family:"Newsreader",serif;cursor:default}
     .soon-badge{font-family:"Archivo",sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:var(--paper-2);color:var(--ink-faint);padding:3px 8px;border-radius:10px}
     .dropdown-divider{height:1px;background:var(--rule);margin:6px 0}
 
-    /* ============ HERO ============ */
-    .hero{padding:64px 0 48px;border-bottom:1px solid var(--rule);position:relative}
+    /* === HERO === */
+    .hero{padding:64px 0 48px;border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
+    .hero .wrap{position:relative;z-index:2}
     .hero .dateline{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
-    .hero .dateline .dot{width:5px;height:5px;border-radius:50%;background:var(--red)}
+    .hero .dateline .dot{width:5px;height:5px;border-radius:50%;background:var(--red);animation:pulse-dot 2.2s ease-in-out infinite}
+    @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(178,44,32,.45)}50%{box-shadow:0 0 0 8px rgba(178,44,32,0)}}
     .hero h1{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(40px,7vw,82px);line-height:.98;letter-spacing:-.025em;max-width:14ch;margin-bottom:24px}
     .hero h1 em{font-style:italic;color:var(--red)}
     .hero .dek{font-size:clamp(18px,2.2vw,22px);color:var(--ink-soft);max-width:62ch;margin-bottom:30px}
     .hero .dek b{color:var(--ink);font-weight:500}
     .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
-    .cta-primary{background:var(--ink);color:var(--paper);padding:14px 26px;font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border:none;cursor:pointer;border-radius:2px;transition:.25s}
-    .cta-primary:hover{background:var(--red)}
-    .cta-ghost{background:transparent;color:var(--ink);padding:14px 26px;font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;border-radius:2px;transition:.25s}
-    .cta-ghost:hover{background:var(--ink);color:var(--paper)}
 
+    .cta-primary{background:var(--ink);color:var(--paper);padding:14px 26px;font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border:none;cursor:pointer;border-radius:2px;transition:.3s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+    .cta-primary::before{content:"";position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:0}
+    .cta-primary:hover::before{transform:scaleX(1)}
+    .cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,24,19,.22)}
+    .cta-primary .cta-label{position:relative;z-index:1}
+
+    .cta-ghost{background:transparent;color:var(--ink);padding:14px 26px;font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;border-radius:2px;transition:.3s cubic-bezier(.2,.8,.2,1)}
+    .cta-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px);box-shadow:0 8px 20px rgba(28,24,19,.16)}
+
+    /* stat strip with counter animation */
     .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-    .stat{padding:20px 18px 18px;border-right:1px solid var(--rule)}
+    .stat{padding:20px 18px 18px;border-right:1px solid var(--rule);transition:background .3s}
     .stat:last-child{border-right:none}
+    .stat:hover{background:var(--paper-2)}
     .stat .num{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1;color:var(--ink);letter-spacing:-.02em}
     .stat .cap{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:8px}
 
-    /* ============ SECTION HEADERS ============ */
+    /* === SECTION HEADERS === */
     .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:64px 0 28px;border-bottom:2px solid var(--rule-strong);padding-bottom:12px}
     .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;line-height:1}
     .sec-head .seq{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap}
 
-    /* ============ FEATURED ============ */
-    .feature{display:grid;grid-template-columns:1.15fr .85fr;gap:0;border:1px solid var(--rule-strong);background:var(--panel);box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.3s;overflow:hidden}
-    .feature:hover{transform:translate(-3px,-3px);box-shadow:24px 28px 0 rgba(28,24,19,.08)}
+    /* === FEATURED === */
+    .feature{display:grid;grid-template-columns:1.15fr .85fr;gap:0;border:1px solid var(--rule-strong);background:var(--panel);box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.4s cubic-bezier(.2,.8,.2,1);overflow:hidden;position:relative}
+    .feature::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(178,44,32,.05) 0%,transparent 55%);opacity:0;transition:opacity .4s;pointer-events:none}
+    .feature:hover{transform:translate(-4px,-4px);box-shadow:28px 32px 0 rgba(28,24,19,.09)}
+    .feature:hover::after{opacity:1}
     .feature .ftxt{padding:38px 36px}
     .feature .label{color:var(--red);margin-bottom:16px;display:block}
     .feature h3{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(28px,3.6vw,40px);line-height:1.02;letter-spacing:-.02em;margin-bottom:16px}
     .feature p{color:var(--ink-soft);font-size:18px;margin-bottom:22px;max-width:46ch}
-    .feature .readmore{font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--red);padding-bottom:3px}
-    .feature .fstat{background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center}
+    .feature .readmore{font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--red);padding-bottom:3px;display:inline-block;transition:letter-spacing .25s}
+    .feature:hover .readmore{letter-spacing:.11em}
+    .feature .fstat{background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;transition:background .4s}
+    .feature:hover .fstat{background:var(--red-deep)}
     .feature .fstat .big{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(54px,8vw,92px);line-height:.9;letter-spacing:-.03em}
     .feature .fstat .small{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cdbfa6;margin-top:14px;max-width:22ch}
 
-    /* ============ REPORT GRID ============ */
+    /* === REPORT GRID === */
     .reports{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--rule-strong);border-bottom:none}
-    .rcard{border-bottom:1px solid var(--rule-strong);border-right:1px solid var(--rule-strong);padding:30px 30px 26px;text-decoration:none;color:inherit;background:var(--paper);transition:.25s;position:relative;display:flex;flex-direction:column}
+    .rcard{border-bottom:1px solid var(--rule-strong);border-right:1px solid var(--rule-strong);padding:30px 30px 26px;text-decoration:none;color:inherit;background:var(--paper);transition:.32s cubic-bezier(.2,.8,.2,1);position:relative;display:flex;flex-direction:column;overflow:hidden}
+    .rcard::after{content:"";position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--red);transition:width .38s cubic-bezier(.2,.8,.2,1)}
     .rcard:nth-child(2n){border-right:none}
-    .rcard:hover{background:var(--panel)}
+    .rcard:hover{background:var(--panel);transform:translateY(-3px);box-shadow:0 12px 30px rgba(28,24,19,.1)}
+    .rcard:hover::after{width:100%}
     .rcard:hover h3{color:var(--red)}
     .rcard .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
     .rcat{font-family:"Archivo",sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:5px 10px;border:1px solid currentColor;border-radius:2px}
@@ -240,18 +272,21 @@
     .rcat.career{color:var(--gold)}
     .rcat.pr{color:#2e7d32}
     .rcat.housing{color:var(--red)}
-    .rno{font-family:"Fraunces",serif;font-weight:900;font-size:30px;color:var(--rule);line-height:1}
+    .rno{font-family:"Fraunces",serif;font-weight:900;font-size:30px;color:var(--rule);line-height:1;transition:color .3s}
+    .rcard:hover .rno{color:var(--paper-2)}
     .rcard h3{font-family:"Fraunces",serif;font-weight:900;font-size:23px;line-height:1.08;letter-spacing:-.015em;margin-bottom:10px;transition:color .2s}
     .rcard p{color:var(--ink-soft);font-size:16px;margin-bottom:18px}
-    .rcard .readmore{margin-top:auto;font-family:"Archivo",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
-    .rcard:hover .readmore{color:var(--ink)}
+    .rcard .readmore{margin-top:auto;font-family:"Archivo",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);transition:color .2s, letter-spacing .2s}
+    .rcard:hover .readmore{color:var(--ink);letter-spacing:.1em}
 
-    /* ============ JOURNEY / ROADMAP ============ */
+    /* === ROADMAP === */
     .journey-intro{font-size:18px;color:var(--ink-soft);max-width:66ch;margin-bottom:30px}
     .roadmap{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
-    .rm{border:1px solid var(--rule);background:var(--panel);padding:18px 16px;border-radius:4px;display:flex;flex-direction:column;min-height:148px;transition:.25s;text-decoration:none;color:inherit;position:relative}
+    .rm{border:1px solid var(--rule);background:var(--panel);padding:18px 16px;border-radius:4px;display:flex;flex-direction:column;min-height:148px;transition:.3s cubic-bezier(.2,.8,.2,1);text-decoration:none;color:inherit;position:relative;overflow:hidden}
+    .rm::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s}
     .rm.live{border-color:var(--ink);background:var(--paper)}
-    .rm.live:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(28,24,19,.12)}
+    .rm.live:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(28,24,19,.13)}
+    .rm.live:hover::before{transform:scaleX(1)}
     .rm .step{font-family:"Fraunces",serif;font-weight:900;font-size:26px;color:var(--rule);line-height:1;margin-bottom:auto}
     .rm.live .step{color:var(--red)}
     .rm .tag{font-family:"Archivo",sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
@@ -260,20 +295,23 @@
     .rm h4{font-family:"Newsreader",serif;font-weight:500;font-size:15px;line-height:1.2}
     .rm.live h4{font-weight:600}
 
-    /* ============ FAQ ============ */
+    /* === FAQ === */
     .faq-wrap{border-top:1px solid var(--rule-strong)}
-    details.faq{border-bottom:1px solid var(--rule);padding:0}
+    details.faq{border-bottom:1px solid var(--rule);overflow:hidden}
     details.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 4px;font-family:"Fraunces",serif;font-weight:600;font-size:clamp(19px,2.4vw,24px);line-height:1.2;letter-spacing:-.01em;transition:color .2s}
     details.faq summary::-webkit-details-marker{display:none}
     details.faq summary:hover{color:var(--red)}
-    details.faq .plus{font-family:"Archivo",sans-serif;font-weight:700;font-size:26px;line-height:1;color:var(--red);flex-shrink:0;transition:transform .3s}
+    details.faq .plus{font-family:"Archivo",sans-serif;font-weight:700;font-size:26px;line-height:1;color:var(--red);flex-shrink:0;transition:transform .38s cubic-bezier(.34,1.56,.64,1)}
     details.faq[open] .plus{transform:rotate(45deg)}
-    details.faq .ans{padding:0 4px 26px;font-size:17px;color:var(--ink-soft);max-width:78ch}
+    details.faq .ans{padding:0 4px 26px;font-size:17px;color:var(--ink-soft);max-width:78ch;animation:faq-in .3s ease}
+    @keyframes faq-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
     details.faq .ans a{color:var(--red);text-decoration:underline;text-underline-offset:3px}
 
-    /* ============ ABOUT ============ */
-    .about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;border:1px solid var(--rule-strong);background:var(--panel);padding:34px;box-shadow:var(--shadow)}
-    .about .ava{width:96px;height:96px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--ink);background:var(--paper-2);display:flex;align-items:center;justify-content:center}
+    /* === ABOUT === */
+    .about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;border:1px solid var(--rule-strong);background:var(--panel);padding:34px;box-shadow:var(--shadow);transition:.35s cubic-bezier(.2,.8,.2,1)}
+    .about:hover{transform:translateY(-3px);box-shadow:24px 28px 0 rgba(28,24,19,.09)}
+    .about .ava{width:96px;height:96px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--ink);background:var(--paper-2);display:flex;align-items:center;justify-content:center;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+    .about:hover .ava{transform:scale(1.07) rotate(-4deg)}
     .about .ava img{width:100%;height:100%;object-fit:cover}
     .about .ava span{font-family:"Fraunces",serif;font-weight:900;font-size:38px;color:var(--ink)}
     .about h2{font-family:"Fraunces",serif;font-weight:900;font-size:26px;letter-spacing:-.01em;margin-bottom:4px}
@@ -281,45 +319,71 @@
     .about p{color:var(--ink-soft);font-size:17px;max-width:64ch}
     .about p a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 
-    /* ============ NEWSLETTER ============ */
+    /* === NEWSLETTER === */
     .news{margin:64px 0 0;background:var(--ink);color:var(--paper);padding:56px 40px;text-align:center;border-radius:4px;position:relative;overflow:hidden}
-    .news::after{content:"✦";position:absolute;font-size:340px;font-family:"Fraunces",serif;color:rgba(255,255,255,.03);right:-40px;bottom:-120px;line-height:1;pointer-events:none}
+    .news::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 130%,rgba(178,44,32,.18) 0%,transparent 60%);pointer-events:none}
+    .news::after{content:"✦";position:absolute;font-size:340px;font-family:"Fraunces",serif;color:rgba(255,255,255,.03);right:-40px;bottom:-120px;line-height:1;pointer-events:none;animation:star-spin 25s linear infinite}
+    @keyframes star-spin{to{transform:rotate(360deg)}}
     .news .kicker{color:var(--gold)}
     .news h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin:14px auto 16px;max-width:18ch;line-height:1.02}
     .news p{color:#cdc3b0;font-size:18px;max-width:54ch;margin:0 auto 28px}
-    .news .btn-news{background:var(--paper);color:var(--ink);border:none;padding:15px 34px;font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;letter-spacing:.03em;cursor:pointer;border-radius:2px;transition:.25s;position:relative;z-index:2}
-    .news .btn-news:hover{background:var(--red);color:#fff}
+    .news .btn-news{background:var(--paper);color:var(--ink);border:none;padding:15px 34px;font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;letter-spacing:.03em;cursor:pointer;border-radius:2px;transition:.3s cubic-bezier(.2,.8,.2,1);position:relative;z-index:2;overflow:hidden}
+    .news .btn-news::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(100%);transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+    .news .btn-news .btn-label{position:relative;z-index:1;transition:color .3s}
+    .news .btn-news:hover::before{transform:translateY(0)}
+    .news .btn-news:hover .btn-label{color:#fff}
+    .news .btn-news:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.32)}
 
-    /* ============ FOOTER ============ */
+    /* === FOOTER === */
     .site-footer{background:var(--ink);color:var(--paper);padding:40px 0 22px;margin-top:0;font-family:"Archivo",sans-serif}
     .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:18px}
     .footer-brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:10px}
-    .footer-brand img{width:30px;height:30px;object-fit:contain;border-radius:3px}
+    .footer-brand img{width:30px;height:30px;object-fit:contain;border-radius:3px;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+    .footer-brand:hover img{transform:scale(1.12) rotate(-6deg)}
     .footer-brand-title{font-family:"Fraunces",serif;font-weight:900;font-size:19px;color:var(--paper)}
     .footer-tag{font-size:13px;color:#cdc3b0;max-width:300px;line-height:1.6}
     .footer-links{display:flex;flex-direction:column;gap:9px}
-    .footer-links a{font-size:13px;color:#cdc3b0;text-decoration:none;transition:.15s}
-    .footer-links a:hover{color:#fff}
-    .footer-ig{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);color:#e8e0d2;padding:9px 15px;border-radius:2px;font-size:13px;text-decoration:none;transition:.2s}
-    .footer-ig:hover{background:rgba(255,255,255,.16);color:#fff}
+    .footer-links a{font-size:13px;color:#cdc3b0;text-decoration:none;transition:color .2s, padding-left .2s;position:relative}
+    .footer-links a:hover{color:#fff;padding-left:10px}
+    .footer-ig{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);color:#e8e0d2;padding:9px 15px;border-radius:2px;font-size:13px;text-decoration:none;transition:.25s}
+    .footer-ig:hover{background:rgba(255,255,255,.16);color:#fff;transform:translateY(-2px)}
     .footer-ig svg{width:15px;height:15px;fill:currentColor}
     .footer-bottom{font-size:12px;color:#9a907e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-    /* ============ MODAL ============ */
-    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,24,19,.66);z-index:1000;align-items:center;justify-content:center}
-    .modal-overlay.open{display:flex}
-    .modal-box{background:#fff;border-radius:8px;padding:24px;max-width:480px;width:90%;position:relative}
-    .modal-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;cursor:pointer;line-height:1;color:var(--ink)}
+    /* === MODAL === */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,24,19,.66);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+    .modal-overlay.open{display:flex;animation:modal-fade .22s ease}
+    @keyframes modal-fade{from{opacity:0}to{opacity:1}}
+    .modal-box{background:#fff;border-radius:8px;padding:24px;max-width:480px;width:90%;position:relative;animation:modal-up .3s cubic-bezier(.34,1.56,.64,1)}
+    @keyframes modal-up{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+    .modal-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;cursor:pointer;line-height:1;color:var(--ink);transition:transform .22s, color .22s}
+    .modal-close:hover{transform:rotate(90deg);color:var(--red)}
 
-    /* ============ REVEAL ANIMATION ============ */
+    /* === SCROLL REVEAL (JS-powered, replaces the old CSS-only animation) === */
+    .reveal,
+    .reveal-left,
+    .reveal-scale{opacity:0;transition:opacity .75s cubic-bezier(.2,.8,.2,1), transform .75s cubic-bezier(.2,.8,.2,1)}
+    .reveal{transform:translateY(30px)}
+    .reveal-left{transform:translateX(-30px)}
+    .reveal-scale{transform:scale(.94)}
+    .reveal.in-view,
+    .reveal-left.in-view,
+    .reveal-scale.in-view{opacity:1;transform:none}
+
+    /* stagger delays */
+    .d1{transition-delay:.05s}.d2{transition-delay:.12s}.d3{transition-delay:.20s}
+    .d4{transition-delay:.28s}.d5{transition-delay:.36s}.d6{transition-delay:.44s}
+    .d7{transition-delay:.52s}.d8{transition-delay:.60s}.d9{transition-delay:.68s}.d10{transition-delay:.76s}
+
+    /* hero elements use keyframe animation (fires immediately on load) */
     @media (prefers-reduced-motion:no-preference){
-      .reveal{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+      .ha{opacity:0;transform:translateY(20px);animation:rise .85s cubic-bezier(.2,.7,.2,1) forwards}
       @keyframes rise{to{opacity:1;transform:none}}
-      .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
-      .d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+      .ha1{animation-delay:.06s}.ha2{animation-delay:.20s}.ha3{animation-delay:.36s}
+      .ha4{animation-delay:.52s}.ha5{animation-delay:.68s}
     }
 
-    /* ============ RESPONSIVE ============ */
+    /* === RESPONSIVE === */
     @media (max-width:900px){
       .feature{grid-template-columns:1fr}
       .feature .fstat{padding:30px 24px}
@@ -331,11 +395,13 @@
       .hamburger{display:flex}
       .btn-ig{display:none}
       .nav-links{display:none;flex-direction:column;align-items:flex-start;gap:0;padding:6px 0 12px;text-transform:none;letter-spacing:.02em;font-size:14px;font-family:"Newsreader",serif}
-      .nav-links.open{display:flex}
-      .nav-links a{padding:12px 2px;border-bottom:1px solid var(--rule);width:100%}
+      .nav-links.open{display:flex;animation:nav-drop .2s ease}
+      @keyframes nav-drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+      .nav-links > a{padding:12px 2px;border-bottom:1px solid var(--rule);width:100%}
+      .nav-links > a::after{display:none}
       .nav-dropdown{width:100%}
       .nav-dropdown > a::after{display:none}
-      .dropdown-menu{display:block;position:static;min-width:0;border:none;background:transparent;box-shadow:none;padding:2px 0 6px 14px}
+      .dropdown-menu{display:block;position:static;min-width:0;border:none;background:transparent;box-shadow:none;padding:2px 0 6px 14px;animation:none}
       .dropdown-menu a{padding:9px 4px}
       .stat-strip{grid-template-columns:repeat(2,1fr)}
       .stat:nth-child(2){border-right:none}
@@ -353,6 +419,8 @@
 </head>
 <body>
 
+<div class="progress-bar" id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ===== SUBSCRIBE MODAL ===== -->
@@ -364,7 +432,7 @@
 </div>
 
 <!-- ===== MASTHEAD ===== -->
-<header role="banner">
+<header role="banner" id="site-header">
   <div class="wrap">
     <div class="nav-top">
       <a class="brand" href="/" aria-label="Unfiltered Canada home">
@@ -412,8 +480,32 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <!-- Subtle animated background geometry -->
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1400 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .hl{stroke:#c8bfa8;stroke-width:.7;fill:none}
+            .hl-anim{animation:hl-in 1.6s cubic-bezier(.2,.8,.2,1) both}
+            .c1{animation-delay:.3s}.c2{animation-delay:.6s}.c3{animation-delay:.9s}
+            @keyframes hl-in{from{opacity:0;stroke-dashoffset:2000}to{opacity:.6;stroke-dashoffset:0}}
+          </style>
+        </defs>
+        <line class="hl hl-anim c1" x1="0" y1="100" x2="1400" y2="100" stroke-dasharray="2000"/>
+        <line class="hl hl-anim c2" x1="0" y1="300" x2="1400" y2="300" stroke-dasharray="2000"/>
+        <line class="hl hl-anim c3" x1="0" y1="480" x2="1400" y2="480" stroke-dasharray="2000"/>
+        <circle cx="1050" cy="240" r="300" fill="none" stroke="#c8bfa8" stroke-width=".5" opacity=".4"
+          style="transform-origin:1050px 240px;animation:orbit 70s linear infinite"/>
+        <circle cx="1050" cy="240" r="180" fill="none" stroke="#c8bfa8" stroke-width=".4" opacity=".3"
+          style="transform-origin:1050px 240px;animation:orbit 45s linear infinite reverse"/>
+        <circle cx="1050" cy="240" r="80" fill="none" stroke="#b22c20" stroke-width=".6" opacity=".18"
+          style="transform-origin:1050px 240px;animation:orbit 25s linear infinite"/>
+        <style>@keyframes orbit{to{transform:rotate(360deg)}}</style>
+      </svg>
+    </div>
+
     <div class="wrap">
-      <div class="dateline reveal d1">
+      <div class="dateline ha ha1">
         <span class="dot"></span>
         <span>Independent Field Report</span>
         <span>·</span>
@@ -421,17 +513,29 @@
         <span>·</span>
         <span>Written from the inside</span>
       </div>
-      <h1 class="reveal d2">Is moving to Canada still <em>worth it</em> in 2026?</h1>
-      <p class="dek reveal d3">No recruiters. No affiliate links. No brochure version. <b>Just the real salaries, the quiet costs, the job hunt nobody warns you about, and the lessons I gathered across more than eight years on the ground.</b></p>
-      <div class="hero-cta reveal d4">
-        <a href="#reports" class="cta-primary">Read the reports</a>
+      <h1 class="ha ha2">Is moving to Canada still <em>worth it</em> in 2026?</h1>
+      <p class="dek ha ha3">No recruiters. No affiliate links. No brochure version. <b>Just the real salaries, the quiet costs, the job hunt nobody warns you about, and the lessons I gathered across more than eight years on the ground.</b></p>
+      <div class="hero-cta ha ha4">
+        <a href="#reports" class="cta-primary"><span class="cta-label">Read the reports</span></a>
         <button class="cta-ghost" onclick="document.getElementById('subscribe-modal').classList.add('open')">Get new reports by email</button>
       </div>
-      <div class="stat-strip reveal d5">
-        <div class="stat"><div class="num">8.5</div><div class="cap">Years on the ground</div></div>
-        <div class="stat"><div class="num">5</div><div class="cap">Deep reports published</div></div>
-        <div class="stat"><div class="num">0</div><div class="cap">Affiliate links, ever</div></div>
-        <div class="stat"><div class="num">100%</div><div class="cap">Lived experience</div></div>
+      <div class="stat-strip ha ha5" id="stat-strip">
+        <div class="stat">
+          <div class="num" data-target="8.5" data-decimal="true" data-suffix="">8.5</div>
+          <div class="cap">Years on the ground</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="5" data-decimal="false" data-suffix="">5</div>
+          <div class="cap">Deep reports published</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="0" data-decimal="false" data-suffix="">0</div>
+          <div class="cap">Affiliate links, ever</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="100" data-decimal="false" data-suffix="%">100%</div>
+          <div class="cap">Lived experience</div>
+        </div>
       </div>
     </div>
   </section>
@@ -439,11 +543,11 @@
   <div class="wrap">
 
     <!-- ===== FEATURED ===== -->
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <h2>The Latest Report</h2>
       <span class="seq">Fresh off the desk</span>
     </div>
-    <a class="feature" href="/cost-of-renting-ontario-newcomers-2026.html">
+    <a class="feature reveal-scale" href="/cost-of-renting-ontario-newcomers-2026.html">
       <div class="ftxt">
         <span class="label">Housing · 2026</span>
         <h3>Cost of Renting in Ontario for Newcomers</h3>
@@ -457,123 +561,121 @@
     </a>
 
     <!-- ===== REPORTS GRID ===== -->
-    <div class="sec-head" id="reports" style="scroll-margin-top:150px">
+    <div class="sec-head reveal" id="reports" style="scroll-margin-top:150px">
       <h2>The Reports</h2>
       <span class="seq">Five chapters, no fluff</span>
     </div>
     <div class="reports">
-
-      <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html" class="rcard">
+      <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html" class="rcard reveal d1">
         <div class="top"><span class="rcat education">Education</span><span class="rno">01</span></div>
         <h3>Is a Canadian Education Worth It?</h3>
         <p>An honest return on investment look that weighs real tuition costs against the entry level job market of 2026.</p>
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a href="/The_Reality_of_First_Job.html" class="rcard">
+      <a href="/The_Reality_of_First_Job.html" class="rcard reveal d2">
         <div class="top"><span class="rcat career">Career</span><span class="rno">02</span></div>
         <h3>Finding Your First Job</h3>
         <p>Why polished resumes vanish into automated tracking systems, and the angles that actually get a newcomer replies.</p>
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a href="/survival-vs-field-job-gap.html" class="rcard">
+      <a href="/survival-vs-field-job-gap.html" class="rcard reveal d3">
         <div class="top"><span class="rcat career">Career</span><span class="rno">03</span></div>
         <h3>The Survival vs Field Job Trap</h3>
         <p>The dangerous gap between minimum wage survival work and the role you actually trained for, and how people get stuck.</p>
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a href="/simplest-way-to-get-canadian-pr.html" class="rcard">
+      <a href="/simplest-way-to-get-canadian-pr.html" class="rcard reveal d4">
         <div class="top"><span class="rcat pr">Immigration Paths</span><span class="rno">04</span></div>
         <h3>The Strategic Path to Canadian PR</h3>
         <p>Regional scores, targeted occupations and the shifting IRCC lines, mapped out clearly and without the hype.</p>
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a href="/cost-of-renting-ontario-newcomers-2026.html" class="rcard">
+      <a href="/cost-of-renting-ontario-newcomers-2026.html" class="rcard reveal d5">
         <div class="top"><span class="rcat housing">Housing</span><span class="rno">05</span></div>
         <h3>Cost of Renting in Ontario (2026)</h3>
         <p>What a $2,500 budget really gets you, the hidden fees, deposits with no credit history, and paying from abroad.</p>
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a class="rcard" style="background:var(--paper-2)" onclick="document.getElementById('subscribe-modal').classList.add('open');return false;" href="#">
+      <a class="rcard reveal d6" style="background:var(--paper-2)" onclick="document.getElementById('subscribe-modal').classList.add('open');return false;" href="#">
         <div class="top"><span class="rcat" style="color:var(--ink-faint)">Up Next</span><span class="rno">06</span></div>
         <h3>How Much Do You Actually Take Home?</h3>
         <p>Real net pay after provincial taxes and the quiet cost of living drains. Subscribe to get it the moment it lands.</p>
         <span class="readmore">Notify me &rarr;</span>
       </a>
-
     </div>
 
     <!-- ===== THE JOURNEY ===== -->
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <h2>The Whole Journey</h2>
       <span class="seq">Education to PR, in order</span>
     </div>
-    <p class="journey-intro">The rules of the game keep shifting fast. Here is the full arc of an immigrant journey through Canada, the chapters already published and the ones I am still researching. Follow it top to bottom, or jump to whatever stage you are facing right now.</p>
+    <p class="journey-intro reveal">The rules of the game keep shifting fast. Here is the full arc of an immigrant journey through Canada, the chapters already published and the ones I am still researching. Follow it top to bottom, or jump to whatever stage you are facing right now.</p>
     <div class="roadmap">
-      <a class="rm live" href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">
+      <a class="rm live reveal d1" href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">
         <span class="step">01</span><span class="tag">Published</span><h4>Education and its true cost</h4>
       </a>
-      <a class="rm live" href="/The_Reality_of_First_Job.html">
+      <a class="rm live reveal d2" href="/The_Reality_of_First_Job.html">
         <span class="step">02</span><span class="tag">Published</span><h4>Landing the first job</h4>
       </a>
-      <a class="rm live" href="/survival-vs-field-job-gap.html">
+      <a class="rm live reveal d3" href="/survival-vs-field-job-gap.html">
         <span class="step">03</span><span class="tag">Published</span><h4>Survival vs field work</h4>
       </a>
-      <a class="rm live" href="/simplest-way-to-get-canadian-pr.html">
+      <a class="rm live reveal d4" href="/simplest-way-to-get-canadian-pr.html">
         <span class="step">04</span><span class="tag">Published</span><h4>The path to PR</h4>
       </a>
-      <a class="rm live" href="/cost-of-renting-ontario-newcomers-2026.html">
+      <a class="rm live reveal d5" href="/cost-of-renting-ontario-newcomers-2026.html">
         <span class="step">05</span><span class="tag">Published</span><h4>Renting in Ontario</h4>
       </a>
-      <div class="rm"><span class="step">06</span><span class="tag">Up Next</span><h4>What you take home</h4></div>
-      <div class="rm"><span class="step">07</span><span class="tag">In Queue</span><h4>Corporate workplace culture</h4></div>
-      <div class="rm"><span class="step">08</span><span class="tag">In Queue</span><h4>The hidden mental toll</h4></div>
-      <div class="rm"><span class="step">09</span><span class="tag">In Queue</span><h4>An honest talk on bias</h4></div>
-      <div class="rm"><span class="step">10</span><span class="tag">In Queue</span><h4>Should you actually move?</h4></div>
+      <div class="rm reveal d6"><span class="step">06</span><span class="tag">Up Next</span><h4>What you take home</h4></div>
+      <div class="rm reveal d7"><span class="step">07</span><span class="tag">In Queue</span><h4>Corporate workplace culture</h4></div>
+      <div class="rm reveal d8"><span class="step">08</span><span class="tag">In Queue</span><h4>The hidden mental toll</h4></div>
+      <div class="rm reveal d9"><span class="step">09</span><span class="tag">In Queue</span><h4>An honest talk on bias</h4></div>
+      <div class="rm reveal d10"><span class="step">10</span><span class="tag">In Queue</span><h4>Should you actually move?</h4></div>
     </div>
 
     <!-- ===== FAQ ===== -->
-    <div class="sec-head" id="faq" style="scroll-margin-top:150px">
+    <div class="sec-head reveal" id="faq" style="scroll-margin-top:150px">
       <h2>Straight Answers</h2>
       <span class="seq">The questions people ask me most</span>
     </div>
     <div class="faq-wrap">
-      <details class="faq">
+      <details class="faq reveal">
         <summary>Is immigrating to Canada still worth it in 2026?<span class="plus">+</span></summary>
         <div class="ans">It depends on your field, your savings runway and your patience. The opportunity is real, but so are the slower job market, higher rents and the survival job phase most agents never mention. Canada rewards people who arrive with a clear plan and a financial cushion, and it tends to punish those who expect the brochure version.</div>
       </details>
-      <details class="faq">
+      <details class="faq reveal">
         <summary>How hard is it to find a job as a newcomer?<span class="plus">+</span></summary>
         <div class="ans">Harder than most people expect. Many applications disappear into automated tracking systems before a human ever sees them. Referrals, a Canadian style resume and steady networking matter far more than raw application volume. <a href="/The_Reality_of_First_Job.html">Read the full breakdown here.</a></div>
       </details>
-      <details class="faq">
+      <details class="faq reveal">
         <summary>What is the difference between a survival job and a field job?<span class="plus">+</span></summary>
         <div class="ans">A survival job pays the bills right away, often near minimum wage. A field job is the role you trained for and the one that builds a real career. The trap is settling into survival work and slowly losing momentum toward the role you came for. <a href="/survival-vs-field-job-gap.html">See how to avoid it.</a></div>
       </details>
-      <details class="faq">
+      <details class="faq reveal">
         <summary>How much rent should I budget in Ontario?<span class="plus">+</span></summary>
         <div class="ans">A budget around $2,500 a month stretches very differently from city to city, and newcomers also face deposits, no credit history and the puzzle of paying from abroad. Knowing the hidden costs before you land saves real stress in those first months. <a href="/cost-of-renting-ontario-newcomers-2026.html">Here is the full cost map.</a></div>
       </details>
-      <details class="faq">
+      <details class="faq reveal">
         <summary>What is the simplest path to Canadian PR?<span class="plus">+</span></summary>
         <div class="ans">There is no single simple path, but some routes are far more reachable than others depending on your score, your occupation and the province you target. The trick is matching your profile to a stream where you are genuinely competitive instead of chasing the most crowded one. <a href="/simplest-way-to-get-canadian-pr.html">See the strategy.</a></div>
       </details>
-      <details class="faq">
+      <details class="faq reveal">
         <summary>Is a Canadian education worth the cost?<span class="plus">+</span></summary>
         <div class="ans">Sometimes. The value depends on the program, the school and how the 2026 entry level market treats that credential. A clear return on investment view, tuition weighed against realistic starting salaries, matters far more than any college brochure. <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html">Read the analysis.</a></div>
       </details>
     </div>
 
     <!-- ===== ABOUT ===== -->
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <h2>Who Writes This</h2>
       <span class="seq">A real person, not an agency</span>
     </div>
-    <div class="about">
+    <div class="about reveal">
       <div class="ava"><span>A</span></div>
       <div>
         <h2>Anuj Vaghela</h2>
@@ -586,11 +688,11 @@
 
   <!-- ===== NEWSLETTER ===== -->
   <div class="wrap">
-    <section class="news">
+    <section class="news reveal">
       <span class="kicker">Get the raw data first</span>
       <h2>The numbers, before everyone else has them.</h2>
       <p>Join other ambitious newcomers and professionals who get my evidence based dispatches the moment they go live. No generic advice. No spam. Just the real picture.</p>
-      <button class="btn-news" onclick="document.getElementById('subscribe-modal').classList.add('open')">Subscribe to the feed</button>
+      <button class="btn-news" onclick="document.getElementById('subscribe-modal').classList.add('open')"><span class="btn-label">Subscribe to the feed</span></button>
     </section>
   </div>
 
@@ -626,34 +728,89 @@
 </footer>
 
 <script>
-  /* Hamburger aria state */
-  (function(){
-    var ham=document.querySelector('.hamburger');
-    if(ham){ham.addEventListener('click',function(){
-      var exp=ham.getAttribute('aria-expanded')==='true';
-      ham.setAttribute('aria-expanded',String(!exp));
-    });}
-  })();
+(function(){
+  /* ---- Reading progress bar ---- */
+  var bar = document.getElementById('progress-bar');
+  function updateBar(){
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateBar, {passive:true});
 
-  /* Subscribe pulse near the bottom (max 3 times) */
-  (function(){
-    var count=0, atBottom=false;
-    var btn=document.querySelector('.nav-top .btn-sub');
-    if(!btn) return;
+  /* ---- Header shadow on scroll ---- */
+  var hdr = document.getElementById('site-header');
+  window.addEventListener('scroll', function(){
+    hdr.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  /* ---- Scroll reveal via IntersectionObserver ---- */
+  var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.1, rootMargin:'0px 0px -36px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  /* ---- Stat counter animation ---- */
+  function animateCounters(){
+    var nums = document.querySelectorAll('.stat .num[data-target]');
+    nums.forEach(function(el){
+      var target  = parseFloat(el.getAttribute('data-target'));
+      var isFloat = el.getAttribute('data-decimal') === 'true';
+      var suffix  = el.getAttribute('data-suffix') || '';
+      var dur     = 1500;
+      var start   = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        var val  = target * ease;
+        el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  var strip = document.getElementById('stat-strip');
+  if(strip && 'IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){ animateCounters(); co.disconnect(); }
+    }, {threshold:0.5});
+    co.observe(strip);
+  }
+
+  /* ---- Hamburger aria state ---- */
+  var ham = document.querySelector('.hamburger');
+  if(ham){
+    ham.addEventListener('click',function(){
+      var exp = ham.getAttribute('aria-expanded') === 'true';
+      ham.setAttribute('aria-expanded', String(!exp));
+    });
+  }
+
+  /* ---- Subscribe pulse near bottom (max 3 times) ---- */
+  var count = 0, atBottom = false;
+  var subBtn = document.querySelector('.nav-top .btn-sub');
+  if(subBtn){
     window.addEventListener('scroll', function(){
-      if(count>=3) return;
-      var scrolled=window.scrollY+window.innerHeight;
-      var total=document.documentElement.scrollHeight;
-      var nearBottom=scrolled>=total-160;
+      if(count >= 3) return;
+      var nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 160;
       if(nearBottom && !atBottom){
-        atBottom=true; count++;
-        btn.animate(
-          [{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],
-          {duration:600, easing:'ease-out'}
+        atBottom = true; count++;
+        subBtn.animate(
+          [{transform:'scale(1)'},{transform:'scale(1.09)'},{transform:'scale(1)'}],
+          {duration:620, easing:'ease-out'}
         );
-      } else if(!nearBottom){ atBottom=false; }
+      } else if(!nearBottom){ atBottom = false; }
     }, {passive:true});
-  })();
+  }
+})();
 </script>
 
 </body>
