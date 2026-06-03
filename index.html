@@ -62,7 +62,8 @@
       { "@type": "ListItem", "position": 2, "name": "The Reality of Finding Your First Job", "url": "https://www.unfilteredcanada.com/The_Reality_of_First_Job.html" },
       { "@type": "ListItem", "position": 3, "name": "The Survival vs Field Job Trap", "url": "https://www.unfilteredcanada.com/survival-vs-field-job-gap.html" },
       { "@type": "ListItem", "position": 4, "name": "The Simplest Way to Get Canadian PR", "url": "https://www.unfilteredcanada.com/simplest-way-to-get-canadian-pr.html" },
-      { "@type": "ListItem", "position": 5, "name": "Cost of Renting in Ontario for Newcomers 2026", "url": "https://www.unfilteredcanada.com/cost-of-renting-ontario-newcomers-2026.html" }
+      { "@type": "ListItem", "position": 5, "name": "Cost of Renting in Ontario for Newcomers 2026", "url": "https://www.unfilteredcanada.com/cost-of-renting-ontario-newcomers-2026.html" },
+      { "@type": "ListItem", "position": 6, "name": "How Much Money Do You Take Home in Canada?", "url": "https://www.unfilteredcanada.com/How_Much_Money_Do_You_Take_Home_in_Canada.html" }
     ]
   }
   </script>
@@ -152,14 +153,11 @@
     .kicker{font-family:"Archivo",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700;color:var(--red)}
     .label{font-family:"Archivo",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700}
 
-    /* === SKIP LINK === */
     .skip-link{position:absolute;top:-48px;left:0;background:var(--ink);color:#fff;padding:8px 16px;font-family:"Archivo",sans-serif;font-size:13px;text-decoration:none;z-index:9999;border-radius:0 0 6px 0;transition:top .2s}
     .skip-link:focus{top:0}
 
-    /* === PROGRESS BAR === */
     .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--red);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none}
 
-    /* === MASTHEAD === */
     header{
       position:sticky;top:0;z-index:100;
       background:rgba(246,242,233,.93);
@@ -195,8 +193,11 @@
     .nav-links > a::after{content:"";position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--red);transition:width .25s}
     .nav-links > a:hover,.nav-links > a.active{color:var(--red)}
     .nav-links > a:hover::after,.nav-links > a.active::after{width:100%}
+    .nav-dropdown > a:hover::after,.nav-dropdown > a:focus::after{width:0 !important;background:none}
     .nav-dropdown{position:relative}
-    .nav-dropdown > a::after{content:"▾";margin-left:5px;font-size:9px;position:static;background:none;height:auto;width:auto}
+    .nav-dropdown > a{text-decoration:none}
+    .nav-dropdown > a::after{content:"▾";margin-left:5px;font-size:9px;position:static;display:inline;background:none;height:0;width:0;border:none;transition:none}
+    .nav-dropdown:hover > a,.nav-dropdown:focus-within > a{color:var(--red)}
     .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--rule);border-radius:4px;min-width:340px;padding:8px 0;z-index:200;box-shadow:0 18px 40px rgba(28,24,19,.18);animation:drop-in .18s ease}
     @keyframes drop-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
     .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:block}
@@ -206,7 +207,6 @@
     .soon-badge{font-family:"Archivo",sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:var(--paper-2);color:var(--ink-faint);padding:3px 8px;border-radius:10px}
     .dropdown-divider{height:1px;background:var(--rule);margin:6px 0}
 
-    /* === HERO === */
     .hero{padding:64px 0 48px;border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
     .hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
     .hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
@@ -229,7 +229,6 @@
     .cta-ghost{background:transparent;color:var(--ink);padding:14px 26px;font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;border-radius:2px;transition:.3s cubic-bezier(.2,.8,.2,1)}
     .cta-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px);box-shadow:0 8px 20px rgba(28,24,19,.16)}
 
-    /* stat strip with counter animation */
     .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
     .stat{padding:20px 18px 18px;border-right:1px solid var(--rule);transition:background .3s}
     .stat:last-child{border-right:none}
@@ -237,12 +236,10 @@
     .stat .num{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1;color:var(--ink);letter-spacing:-.02em}
     .stat .cap{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:8px}
 
-    /* === SECTION HEADERS === */
     .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:64px 0 28px;border-bottom:2px solid var(--rule-strong);padding-bottom:12px}
     .sec-head h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;line-height:1}
     .sec-head .seq{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap}
 
-    /* === FEATURED === */
     .feature{display:grid;grid-template-columns:1.15fr .85fr;gap:0;border:1px solid var(--rule-strong);background:var(--panel);box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.4s cubic-bezier(.2,.8,.2,1);overflow:hidden;position:relative}
     .feature::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(178,44,32,.05) 0%,transparent 55%);opacity:0;transition:opacity .4s;pointer-events:none}
     .feature:hover{transform:translate(-4px,-4px);box-shadow:28px 32px 0 rgba(28,24,19,.09)}
@@ -255,10 +252,9 @@
     .feature:hover .readmore{letter-spacing:.11em}
     .feature .fstat{background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;transition:background .4s}
     .feature:hover .fstat{background:var(--red-deep)}
-    .feature .fstat .big{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(54px,8vw,92px);line-height:.9;letter-spacing:-.03em}
+    .feature .fstat .big{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(44px,6vw,72px);line-height:.9;letter-spacing:-.03em}
     .feature .fstat .small{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cdbfa6;margin-top:14px;max-width:22ch}
 
-    /* === REPORT GRID === */
     .reports{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--rule-strong);border-bottom:none}
     .rcard{border-bottom:1px solid var(--rule-strong);border-right:1px solid var(--rule-strong);padding:30px 30px 26px;text-decoration:none;color:inherit;background:var(--paper);transition:.32s cubic-bezier(.2,.8,.2,1);position:relative;display:flex;flex-direction:column;overflow:hidden}
     .rcard::after{content:"";position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--red);transition:width .38s cubic-bezier(.2,.8,.2,1)}
@@ -279,7 +275,6 @@
     .rcard .readmore{margin-top:auto;font-family:"Archivo",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);transition:color .2s, letter-spacing .2s}
     .rcard:hover .readmore{color:var(--ink);letter-spacing:.1em}
 
-    /* === ROADMAP === */
     .journey-intro{font-size:18px;color:var(--ink-soft);max-width:66ch;margin-bottom:30px}
     .roadmap{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
     .rm{border:1px solid var(--rule);background:var(--panel);padding:18px 16px;border-radius:4px;display:flex;flex-direction:column;min-height:148px;transition:.3s cubic-bezier(.2,.8,.2,1);text-decoration:none;color:inherit;position:relative;overflow:hidden}
@@ -295,7 +290,6 @@
     .rm h4{font-family:"Newsreader",serif;font-weight:500;font-size:15px;line-height:1.2}
     .rm.live h4{font-weight:600}
 
-    /* === FAQ === */
     .faq-wrap{border-top:1px solid var(--rule-strong)}
     details.faq{border-bottom:1px solid var(--rule);overflow:hidden}
     details.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 4px;font-family:"Fraunces",serif;font-weight:600;font-size:clamp(19px,2.4vw,24px);line-height:1.2;letter-spacing:-.01em;transition:color .2s}
@@ -307,19 +301,7 @@
     @keyframes faq-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
     details.faq .ans a{color:var(--red);text-decoration:underline;text-underline-offset:3px}
 
-    /* === ABOUT === */
-    .about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;border:1px solid var(--rule-strong);background:var(--panel);padding:34px;box-shadow:var(--shadow);transition:.35s cubic-bezier(.2,.8,.2,1)}
-    .about:hover{transform:translateY(-3px);box-shadow:24px 28px 0 rgba(28,24,19,.09)}
-    .about .ava{width:96px;height:96px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--ink);background:var(--paper-2);display:flex;align-items:center;justify-content:center;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
-    .about:hover .ava{transform:scale(1.07) rotate(-4deg)}
-    .about .ava img{width:100%;height:100%;object-fit:cover}
-    .about .ava span{font-family:"Fraunces",serif;font-weight:900;font-size:38px;color:var(--ink)}
-    .about h2{font-family:"Fraunces",serif;font-weight:900;font-size:26px;letter-spacing:-.01em;margin-bottom:4px}
-    .about .role{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
-    .about p{color:var(--ink-soft);font-size:17px;max-width:64ch}
-    .about p a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 
-    /* === NEWSLETTER === */
     .news{margin:64px 0 0;background:var(--ink);color:var(--paper);padding:56px 40px;text-align:center;border-radius:4px;position:relative;overflow:hidden}
     .news::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 130%,rgba(178,44,32,.18) 0%,transparent 60%);pointer-events:none}
     .news::after{content:"✦";position:absolute;font-size:340px;font-family:"Fraunces",serif;color:rgba(255,255,255,.03);right:-40px;bottom:-120px;line-height:1;pointer-events:none;animation:star-spin 25s linear infinite}
@@ -334,7 +316,6 @@
     .news .btn-news:hover .btn-label{color:#fff}
     .news .btn-news:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.32)}
 
-    /* === FOOTER === */
     .site-footer{background:var(--ink);color:var(--paper);padding:40px 0 22px;margin-top:0;font-family:"Archivo",sans-serif}
     .footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:18px}
     .footer-brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:10px}
@@ -350,7 +331,6 @@
     .footer-ig svg{width:15px;height:15px;fill:currentColor}
     .footer-bottom{font-size:12px;color:#9a907e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-    /* === MODAL === */
     .modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,24,19,.66);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
     .modal-overlay.open{display:flex;animation:modal-fade .22s ease}
     @keyframes modal-fade{from{opacity:0}to{opacity:1}}
@@ -359,7 +339,6 @@
     .modal-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;cursor:pointer;line-height:1;color:var(--ink);transition:transform .22s, color .22s}
     .modal-close:hover{transform:rotate(90deg);color:var(--red)}
 
-    /* === SCROLL REVEAL (JS-powered, replaces the old CSS-only animation) === */
     .reveal,
     .reveal-left,
     .reveal-scale{opacity:0;transition:opacity .75s cubic-bezier(.2,.8,.2,1), transform .75s cubic-bezier(.2,.8,.2,1)}
@@ -370,12 +349,10 @@
     .reveal-left.in-view,
     .reveal-scale.in-view{opacity:1;transform:none}
 
-    /* stagger delays */
     .d1{transition-delay:.05s}.d2{transition-delay:.12s}.d3{transition-delay:.20s}
     .d4{transition-delay:.28s}.d5{transition-delay:.36s}.d6{transition-delay:.44s}
     .d7{transition-delay:.52s}.d8{transition-delay:.60s}.d9{transition-delay:.68s}.d10{transition-delay:.76s}
 
-    /* hero elements use keyframe animation (fires immediately on load) */
     @media (prefers-reduced-motion:no-preference){
       .ha{opacity:0;transform:translateY(20px);animation:rise .85s cubic-bezier(.2,.7,.2,1) forwards}
       @keyframes rise{to{opacity:1;transform:none}}
@@ -383,7 +360,6 @@
       .ha4{animation-delay:.52s}.ha5{animation-delay:.68s}
     }
 
-    /* === RESPONSIVE === */
     @media (max-width:900px){
       .feature{grid-template-columns:1fr}
       .feature .fstat{padding:30px 24px}
@@ -409,8 +385,6 @@
       .reports{grid-template-columns:1fr}
       .rcard{border-right:none}
       .roadmap{grid-template-columns:repeat(2,1fr)}
-      .about{grid-template-columns:1fr;text-align:center;padding:26px;justify-items:center}
-      .about p{margin:0 auto}
       .news{padding:40px 22px}
       .footer-top{flex-direction:column;gap:22px}
       .footer-links{flex-direction:row;flex-wrap:wrap;gap:10px 18px}
@@ -423,7 +397,6 @@
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ===== SUBSCRIBE MODAL ===== -->
 <div class="modal-overlay" id="subscribe-modal" role="dialog" aria-modal="true" aria-label="Subscribe to Unfiltered Canada" onclick="if(event.target===this) this.classList.remove('open')">
   <div class="modal-box">
     <button class="modal-close" onclick="document.getElementById('subscribe-modal').classList.remove('open')" aria-label="Close subscribe dialog">&times;</button>
@@ -431,7 +404,6 @@
   </div>
 </div>
 
-<!-- ===== MASTHEAD ===== -->
 <header role="banner" id="site-header">
   <div class="wrap">
     <div class="nav-top">
@@ -478,9 +450,7 @@
 
 <main id="main-content">
 
-  <!-- ===== HERO ===== -->
   <section class="hero">
-    <!-- Subtle animated background geometry -->
     <div class="hero-bg" aria-hidden="true">
       <svg viewBox="0 0 1400 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -525,7 +495,7 @@
           <div class="cap">Years on the ground</div>
         </div>
         <div class="stat">
-          <div class="num" data-target="5" data-decimal="false" data-suffix="">5</div>
+          <div class="num" data-target="6" data-decimal="false" data-suffix="">6</div>
           <div class="cap">Deep reports published</div>
         </div>
         <div class="stat">
@@ -542,28 +512,26 @@
 
   <div class="wrap">
 
-    <!-- ===== FEATURED ===== -->
     <div class="sec-head reveal">
       <h2>The Latest Report</h2>
       <span class="seq">Fresh off the desk</span>
     </div>
-    <a class="feature reveal-scale" href="/cost-of-renting-ontario-newcomers-2026.html">
+    <a class="feature reveal-scale" href="/How_Much_Money_Do_You_Take_Home_in_Canada.html">
       <div class="ftxt">
-        <span class="label">Housing · 2026</span>
-        <h3>Cost of Renting in Ontario for Newcomers</h3>
-        <p>What a budget around this number actually gets you across Ontario, the deposits and hidden fees nobody mentions, how to rent with no credit history, and how to pay from abroad before you even land.</p>
+        <span class="label">Income · 2026</span>
+        <h3>How Much Do You Actually Take Home in Canada?</h3>
+        <p>Real net pay after federal and provincial taxes, CPP, EI, and the quiet cost of living drains nobody puts in a spreadsheet. What a Canadian salary actually means for your life, city by city.</p>
         <span class="readmore">Read the full report &rarr;</span>
       </div>
       <div class="fstat">
-        <div class="big">$2,500</div>
-        <div class="small">The monthly rent reality, broken down line by line</div>
+        <div class="big">Net Pay</div>
+        <div class="small">Your gross salary, broken down to what lands in your account</div>
       </div>
     </a>
 
-    <!-- ===== REPORTS GRID ===== -->
     <div class="sec-head reveal" id="reports" style="scroll-margin-top:150px">
       <h2>The Reports</h2>
-      <span class="seq">Five chapters, no fluff</span>
+      <span class="seq">Six chapters, no fluff</span>
     </div>
     <div class="reports">
       <a href="/Is_a_Canadian_Education_Worth_It_for_Immigrants.html" class="rcard reveal d1">
@@ -601,15 +569,14 @@
         <span class="readmore">Read guide &rarr;</span>
       </a>
 
-      <a class="rcard reveal d6" style="background:var(--paper-2)" onclick="document.getElementById('subscribe-modal').classList.add('open');return false;" href="#">
-        <div class="top"><span class="rcat" style="color:var(--ink-faint)">Up Next</span><span class="rno">06</span></div>
+      <a href="/How_Much_Money_Do_You_Take_Home_in_Canada.html" class="rcard reveal d6">
+        <div class="top"><span class="rcat career">Income</span><span class="rno">06</span></div>
         <h3>How Much Do You Actually Take Home?</h3>
-        <p>Real net pay after provincial taxes and the quiet cost of living drains. Subscribe to get it the moment it lands.</p>
-        <span class="readmore">Notify me &rarr;</span>
+        <p>Real net pay after provincial taxes and the quiet cost of living drains. The number on your offer letter versus what hits your account.</p>
+        <span class="readmore">Read guide &rarr;</span>
       </a>
     </div>
 
-    <!-- ===== THE JOURNEY ===== -->
     <div class="sec-head reveal">
       <h2>The Whole Journey</h2>
       <span class="seq">Education to PR, in order</span>
@@ -631,14 +598,15 @@
       <a class="rm live reveal d5" href="/cost-of-renting-ontario-newcomers-2026.html">
         <span class="step">05</span><span class="tag">Published</span><h4>Renting in Ontario</h4>
       </a>
-      <div class="rm reveal d6"><span class="step">06</span><span class="tag">Up Next</span><h4>What you take home</h4></div>
+      <a class="rm live reveal d6" href="/How_Much_Money_Do_You_Take_Home_in_Canada.html">
+        <span class="step">06</span><span class="tag">Published</span><h4>What you take home</h4>
+      </a>
       <div class="rm reveal d7"><span class="step">07</span><span class="tag">In Queue</span><h4>Corporate workplace culture</h4></div>
       <div class="rm reveal d8"><span class="step">08</span><span class="tag">In Queue</span><h4>The hidden mental toll</h4></div>
       <div class="rm reveal d9"><span class="step">09</span><span class="tag">In Queue</span><h4>An honest talk on bias</h4></div>
       <div class="rm reveal d10"><span class="step">10</span><span class="tag">In Queue</span><h4>Should you actually move?</h4></div>
     </div>
 
-    <!-- ===== FAQ ===== -->
     <div class="sec-head reveal" id="faq" style="scroll-margin-top:150px">
       <h2>Straight Answers</h2>
       <span class="seq">The questions people ask me most</span>
@@ -670,23 +638,8 @@
       </details>
     </div>
 
-    <!-- ===== ABOUT ===== -->
-    <div class="sec-head reveal">
-      <h2>Who Writes This</h2>
-      <span class="seq">A real person, not an agency</span>
-    </div>
-    <div class="about reveal">
-      <div class="ava"><span>A</span></div>
-      <div>
-        <h2>Anuj Vaghela</h2>
-        <div class="role">Founder · Unfiltered Canada</div>
-        <p>I moved to Canada, built a life and a career here, and started writing down everything the glossy guides leave out. No sponsorships, no affiliate links, no agency selling you a dream. If you want me to cover a topic or you have a question, reach me through the form on the <a href="/about">about page</a> or send a message on Instagram. If something here saved you a mistake, a subscribe is the best thank you.</p>
-      </div>
-    </div>
-
   </div>
 
-  <!-- ===== NEWSLETTER ===== -->
   <div class="wrap">
     <section class="news reveal">
       <span class="kicker">Get the raw data first</span>
@@ -698,7 +651,6 @@
 
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer class="site-footer" role="contentinfo">
   <div class="wrap">
     <div class="footer-top">
@@ -729,7 +681,6 @@
 
 <script>
 (function(){
-  /* ---- Reading progress bar ---- */
   var bar = document.getElementById('progress-bar');
   function updateBar(){
     var total = document.documentElement.scrollHeight - window.innerHeight;
@@ -737,13 +688,11 @@
   }
   window.addEventListener('scroll', updateBar, {passive:true});
 
-  /* ---- Header shadow on scroll ---- */
   var hdr = document.getElementById('site-header');
   window.addEventListener('scroll', function(){
     hdr.classList.toggle('scrolled', window.scrollY > 40);
   }, {passive:true});
 
-  /* ---- Scroll reveal via IntersectionObserver ---- */
   var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
   if('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(entries){
@@ -756,7 +705,6 @@
     revealEls.forEach(function(el){ el.classList.add('in-view'); });
   }
 
-  /* ---- Stat counter animation ---- */
   function animateCounters(){
     var nums = document.querySelectorAll('.stat .num[data-target]');
     nums.forEach(function(el){
@@ -785,7 +733,6 @@
     co.observe(strip);
   }
 
-  /* ---- Hamburger aria state ---- */
   var ham = document.querySelector('.hamburger');
   if(ham){
     ham.addEventListener('click',function(){
@@ -794,7 +741,6 @@
     });
   }
 
-  /* ---- Subscribe pulse near bottom (max 3 times) ---- */
   var count = 0, atBottom = false;
   var subBtn = document.querySelector('.nav-top .btn-sub');
   if(subBtn){
